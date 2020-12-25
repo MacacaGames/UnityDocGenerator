@@ -1,0 +1,14 @@
+{
+    "name": "com.macacagames.docgenerator",
+    "version": "0.0.1",
+    "displayName": "Macaca Doc Generator",
+    "description": "A helper to make docfx based document in Unity3D",
+    "unity": "2019.4",
+    "dependencies": {},
+    "keywords": [],
+    "author": {
+        "name": "Macaca Games",
+        "email": "contact@macaca.games",
+        "url": "https://macaca.games"
+    }
+}
