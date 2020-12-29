@@ -7,7 +7,9 @@ using UnityEngine;
 
 public static class Excuter
 {
-    public static string Bash(this string cmd,string workingDirectory = "")
+    static string result = "";
+    static string error = "";
+    public static (string result, string error) Bash(this string cmd, string workingDirectory = "")
     {
 
         ProcessStartInfo startInfo;
@@ -15,14 +17,14 @@ public static class Excuter
         var escapedArgs = cmd.Replace("\"", "\\\"");
 
         startInfo = new ProcessStartInfo
-            {
-                FileName = "/bin/bash",
-                Arguments = $"-c \"{escapedArgs}\"",
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false,
-                CreateNoWindow = true,
-            };
+        {
+            FileName = "/bin/bash",
+            Arguments = $"-c \"{escapedArgs}\"",
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true,
+        };
 #elif UNITY_EDITOR_WIN	
        var escapedArgs = cmd;
 
@@ -42,24 +44,26 @@ public static class Excuter
         {
             StartInfo = startInfo
         };
-        process.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
-        {
-            string serveLog = "";
-            // Collect the docfx command output.
-            if (!string.IsNullOrEmpty(e.Data))
-            {
-                serveLog += "Doc Fx Serve Output: " + e.Data + "\n";
-                UnityEngine.Debug.Log(serveLog);
-            }
-        });
-        UnityEngine.Debug.Log(escapedArgs);
+
+
+        // UnityEngine.Debug.Log(escapedArgs);
         process.Start();
-        string result = process.StandardOutput.ReadToEnd();
-        string error = process.StandardError.ReadToEnd();
+        string line = process.StandardOutput.ReadLine();
+        while (line != null)
+        {
+            result += line + "\n";
+            // UnityEngine.Debug.Log("line:" + line);
+            line = process.StandardOutput.ReadLine();
+        }
+        string errorLine = process.StandardOutput.ReadLine();
+        while (errorLine != null)
+        {
+            error += errorLine + "\n";
+            // UnityEngine.Debug.Log("line:" + line);
+            errorLine = process.StandardOutput.ReadLine();
+        }
         process.WaitForExit();
-        if (string.IsNullOrEmpty(result)) UnityEngine.Debug.Log(result);
-        if (string.IsNullOrEmpty(error)) UnityEngine.Debug.LogError(process.StandardError.ReadToEnd());
-        return result;
+        return (result, error);
     }
 
     //From UnityEditor.PackageManager.DocumentationTools.UI

@@ -192,11 +192,13 @@ namespace MacacaGames.DocGenerator
             }
             string cmd = "";
 #if UNITY_EDITOR_OSX
-       cmd = $"{MonoPath} \"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
+            cmd = $"{MonoPath} \"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
 #elif UNITY_EDITOR_WIN
        cmd = $"\"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
 #endif
-            cmd.Bash(DocFxProjectPath);
+            var r = cmd.Bash(DocFxProjectPath);
+            Debug.Log(r.result);
+            Debug.LogError(r.error);
         }
 
         static List<string> csprojFiles = new List<string>();
@@ -279,7 +281,7 @@ namespace MacacaGames.DocGenerator
                 StopServer();
             }
         }
-      
+
         static void StopServer()
         {
             hosting = false;
