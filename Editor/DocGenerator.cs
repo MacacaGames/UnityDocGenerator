@@ -126,7 +126,6 @@ namespace MacacaGames.DocGenerator
                     }
                     else
                     {
-                        DrawLabel("Files ready to generate Document");
                         GUILayout.Label($"Found {csprojFiles.Count} asmdef file{(csprojFiles.Count > 1 ? "s" : "")}");
 
                         using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(200)))
