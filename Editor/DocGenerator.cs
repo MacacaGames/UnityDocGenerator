@@ -37,8 +37,8 @@ namespace MacacaGames.DocGenerator
         static string SampleDocumentProjectPath => PackageRoot + "/DocFxSample";
         static string DocFxZip => PackageRoot + "/Tools/docfx.7z";
         static string DocWebPath => currentSelectPath + "/docs";
-        static string DocFxPath => PersistentDataPath + "/Temp";
-        static string DocFxExcuablePath => PersistentDataPath + "/Temp/docfx/docfx.exe";
+        static string DocFxPath => UnityProjectPath + "/Temp/docfx";
+        static string DocFxExcuablePath => DocFxPath + "/docfx/docfx.exe";
         static string DocFxProjectPath => Path.Combine(currentSelectPath, DocFxProject);
         static string DocFxSettingFilePath => Path.Combine(DocFxProjectPath, "docfx.json");
         static string UnityProjectPath => Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
@@ -49,7 +49,7 @@ namespace MacacaGames.DocGenerator
         const int httpPort = 18080;
         #endregion
 
-        static DocGenerator Instance;
+        public static DocGenerator Instance;
         static SimpleHTTPServer httpServer;
         static string currentSelectPath;
 
@@ -128,7 +128,7 @@ namespace MacacaGames.DocGenerator
                     {
                         GUILayout.Label($"Found {csprojFiles.Count} asmdef file{(csprojFiles.Count > 1 ? "s" : "")}");
 
-                        using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(200)))
+                        using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(150)))
                         {
                             scrollPosition = scroll.scrollPosition;
                             foreach (var item in csprojFiles)
@@ -190,9 +190,13 @@ namespace MacacaGames.DocGenerator
                     Debug.LogError("copyReadmeToDocfxIndex is checked, but no Readme.md found in your folder");
                 }
             }
-
-            var cmd = $"{MonoPath} \"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
-            cmd.Bash();
+            string cmd = "";
+#if UNITY_EDITOR_OSX
+       cmd = $"{MonoPath} \"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
+#elif UNITY_EDITOR_WIN
+       cmd = $"\"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
+#endif
+            cmd.Bash(DocFxProjectPath);
         }
 
         static List<string> csprojFiles = new List<string>();
@@ -275,6 +279,7 @@ namespace MacacaGames.DocGenerator
                 StopServer();
             }
         }
+      
         static void StopServer()
         {
             hosting = false;

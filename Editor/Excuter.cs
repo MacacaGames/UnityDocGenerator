@@ -7,12 +7,14 @@ using UnityEngine;
 
 public static class Excuter
 {
-    public static string Bash(this string cmd)
+    public static string Bash(this string cmd,string workingDirectory = "")
     {
+
+        ProcessStartInfo startInfo;
+#if UNITY_EDITOR_OSX
         var escapedArgs = cmd.Replace("\"", "\\\"");
-        var process = new Process()
-        {
-            StartInfo = new ProcessStartInfo
+
+        startInfo = new ProcessStartInfo
             {
                 FileName = "/bin/bash",
                 Arguments = $"-c \"{escapedArgs}\"",
@@ -20,8 +22,37 @@ public static class Excuter
                 RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true,
-            }
+            };
+#elif UNITY_EDITOR_WIN	
+       var escapedArgs = cmd;
+
+        startInfo = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = $"/C \"{escapedArgs}\"",
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                WorkingDirectory = workingDirectory
+            };
+#endif
+
+        var process = new Process()
+        {
+            StartInfo = startInfo
         };
+        process.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+        {
+            string serveLog = "";
+            // Collect the docfx command output.
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                serveLog += "Doc Fx Serve Output: " + e.Data + "\n";
+                UnityEngine.Debug.Log(serveLog);
+            }
+        });
+        UnityEngine.Debug.Log(escapedArgs);
         process.Start();
         string result = process.StandardOutput.ReadToEnd();
         string error = process.StandardError.ReadToEnd();
@@ -30,7 +61,7 @@ public static class Excuter
         if (string.IsNullOrEmpty(error)) UnityEngine.Debug.LogError(process.StandardError.ReadToEnd());
         return result;
     }
-    
+
     //From UnityEditor.PackageManager.DocumentationTools.UI
     internal static bool Unzip(string zipFilePath, string destPath)
     {
