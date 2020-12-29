@@ -63,103 +63,90 @@ namespace MacacaGames.DocGenerator
         }
 
         string testCmd = "";
+        Vector2 scrollPosition;
         static bool hosting = false;
+        bool isGenerateAvailable
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(currentSelectPath) && Directory.Exists(currentSelectPath) && Directory.Exists(DocFxProjectPath);
+            }
+        }
         void OnGUI()
         {
-            using (var vertical = new EditorGUILayout.VerticalScope("box"))
+            using (var vertical = new GUILayout.VerticalScope("box"))
             {
-                testCmd = EditorGUILayout.TextField("cmd", testCmd);
-                if (GUILayout.Button("Run test cmd", GUILayout.Width(150)))
+                DrawLabel("Enviromnent");
+
+                using (var disable = new EditorGUI.DisabledGroupScope(Application.platform != RuntimePlatform.OSXEditor))
                 {
-                    Debug.Log(testCmd.Bash());
+                    MonoPath = EditorGUILayout.TextField("Mono Path", MonoPath);
+                    // EditorGUILayout.SelectableLabel("Run 'which mono' to get the full mono path which install in your computer");
+                    EditorGUILayout.HelpBox("Run 'which mono' to get the full mono path which installed in your computer \n (Only required on macOS or Linux)", MessageType.Info);
                 }
 
-            }
-
-            using (var disable = new EditorGUI.DisabledGroupScope(Application.platform != RuntimePlatform.OSXEditor))
-            {
-                MonoPath = EditorGUILayout.TextField("Mono Path", MonoPath);
-                // EditorGUILayout.SelectableLabel("Run 'which mono' to get the full mono path which install in your computer");
-                EditorGUILayout.HelpBox("Run 'which mono' to get the full mono path which installed in your computer", MessageType.Info);
-            }
-
-            using (var horizon = new GUILayout.HorizontalScope())
-            {
-                currentSelectPath = EditorGUILayout.TextField("Project Folder", currentSelectPath);
-                if (GUILayout.Button("OpenFolder", GUILayout.Width(150)))
+                using (var horizon = new GUILayout.HorizontalScope())
                 {
-                    currentSelectPath = EditorUtility.OpenFolderPanel("Select Folder", "", "");
-                    GetCsproj();
-                }
-            }
-
-            if (string.IsNullOrEmpty(currentSelectPath))
-            {
-                GUILayout.Label("No thing select :)");
-                return;
-            }
-
-            if (!Directory.Exists(currentSelectPath))
-            {
-                GUILayout.Label("Target path is not a Folder");
-                return;
-            }
-
-            if (!Directory.Exists(DocFxProjectPath))
-            {
-                EditorGUILayout.HelpBox("No DocFx Project Found", MessageType.Error);
-                if (GUILayout.Button("Generate Document Project From sample"))
-                {
-                    GenerateDocumentProject(); ;
-                }
-                return;
-            }
-            if (GUILayout.Button("Refresh Asmdef files"))
-            {
-                GetCsproj();
-            }
-            if (csprojFiles == null || csprojFiles.Count == 0)
-            {
-                EditorGUILayout.HelpBox("No Asmdef find in target Folder", MessageType.Error);
-                return;
-            }
-
-            GUILayout.Label($"Found {csprojFiles.Count} asmdef file{(csprojFiles.Count > 1 ? "s" : "")}");
-            foreach (var item in csprojFiles)
-            {
-                GUILayout.Label($"- {item}");
-            }
-            copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
-            if (GUILayout.Button("Generate Document"))
-            {
-                Docfx();
-            }
-
-
-            GUILayout.FlexibleSpace();
-            using (var disable = new EditorGUI.DisabledGroupScope(!Directory.Exists(DocWebPath)))
-            {
-                using (var check = new EditorGUI.ChangeCheckScope())
-                {
-                    using (var horizon = new GUILayout.HorizontalScope())
+                    currentSelectPath = EditorGUILayout.TextField("Project Folder", currentSelectPath);
+                    if (GUILayout.Button("OpenFolder", GUILayout.Width(150)))
                     {
-                        string url = $"http://127.0.0.1:{httpPort}/index.html";
-                        EditorGUILayout.HelpBox(
-                                           hosting ? $"Go {url} to preview your document" : "Hosting is not running", MessageType.Warning);
-                        if (GUILayout.Button("Open preview", GUILayout.Width(100)))
+                        currentSelectPath = EditorUtility.OpenFolderPanel("Select Folder", "", "");
+                        GetCsproj();
+                    }
+                }
+
+                if (string.IsNullOrEmpty(currentSelectPath))
+                {
+                    GUILayout.Label("No thing select :)");
+                }
+
+                if (Directory.Exists(currentSelectPath) && !Directory.Exists(DocFxProjectPath))
+                {
+                    EditorGUILayout.HelpBox("No DocFx Project Found", MessageType.Error);
+                    if (GUILayout.Button("Generate Document Project From sample"))
+                    {
+                        GenerateDocumentProject(); ;
+                    }
+                }
+            }
+            using (var disable = new EditorGUI.DisabledGroupScope(!isGenerateAvailable))
+            {
+                using (var vertical = new GUILayout.VerticalScope("box"))
+                {
+                    DrawLabel("Setting");
+
+                    copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
+                }
+
+                using (var vertical = new GUILayout.VerticalScope("box"))
+                {
+                    if (csprojFiles == null || csprojFiles.Count == 0)
+                    {
+                        EditorGUILayout.HelpBox("No Asmdef find in target Folder", MessageType.Error);
+                    }
+                    else
+                    {
+                        DrawLabel("Files ready to generate Document");
+                        GUILayout.Label($"Found {csprojFiles.Count} asmdef file{(csprojFiles.Count > 1 ? "s" : "")}");
+
+                        using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(200)))
                         {
-                            Application.OpenURL(url);
+                            scrollPosition = scroll.scrollPosition;
+                            foreach (var item in csprojFiles)
+                            {
+                                GUILayout.Label($"- {item}");
+                            }
                         }
                     }
-
-                    hosting = GUILayout.Toggle(hosting, hosting ? "Hosting..." : "Start Hosting", EditorStyles.toolbarButton);
-                    if (check.changed)
-                    {
-                        SwitchHosting();
-                    }
+                }
+                if (GUILayout.Button("Generate Document"))
+                {
+                    Docfx();
                 }
             }
 
+            GUILayout.FlexibleSpace();
+            DrawHosting();
         }
 
         bool copyReadmeToDocfxIndex = false;
@@ -209,7 +196,7 @@ namespace MacacaGames.DocGenerator
             cmd.Bash();
         }
 
-        List<string> csprojFiles = new List<string>();
+        static List<string> csprojFiles = new List<string>();
         void GetCsproj()
         {
             //Get csproj from asmdef 
@@ -243,6 +230,40 @@ namespace MacacaGames.DocGenerator
                 Excuter.Unzip(DocFxZip, DocFxPath);
             }
         }
+
+
+        void DrawHosting()
+        {
+            using (var vertical = new GUILayout.VerticalScope("box"))
+            {
+                DrawLabel("Hosting");
+                using (var disable = new EditorGUI.DisabledGroupScope(!Directory.Exists(DocWebPath)))
+                {
+                    using (var horizon = new GUILayout.HorizontalScope())
+                    {
+                        string url = $"http://127.0.0.1:{httpPort}/index.html";
+                        EditorGUILayout.HelpBox(
+                                           hosting ? $"Go {url} to preview your document" : "Hosting is not running", MessageType.Warning);
+                        using (var vertical2 = new GUILayout.VerticalScope("box", GUILayout.Width(100)))
+                        {
+                            if (GUILayout.Button("Open preview"))
+                            {
+                                Application.OpenURL(url);
+                            }
+
+                            using (var check = new EditorGUI.ChangeCheckScope())
+                            {
+                                hosting = GUILayout.Toggle(hosting, hosting ? "Hosting..." : "Start Hosting", EditorStyles.toolbarButton);
+                                if (check.changed)
+                                {
+                                    SwitchHosting();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         void SwitchHosting()
         {
             if (hosting)
@@ -255,12 +276,23 @@ namespace MacacaGames.DocGenerator
                 StopServer();
             }
         }
-        [UnityEditor.Callbacks.DidReloadScripts]
-        private static void StopServer()
+        static void StopServer()
         {
             hosting = false;
             if (httpServer != null)
                 httpServer.Stop();
+        }
+        [UnityEditor.Callbacks.DidReloadScripts]
+        private static void OnScriptReload()
+        {
+            csprojFiles.Clear();
+            StopServer();
+        }
+
+        void DrawLabel(string label)
+        {
+            GUILayout.Label(label, EditorStyles.boldLabel);
+            // GUILayout.Label("", new GUIStyle("TV Insertion"), GUILayout.Width(position.width));
         }
     }
 

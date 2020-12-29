@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 public class Utils
 {
+    //From UnityEditor.PackageManager.DocumentationTools.UI
     internal static string Get7zPath
     {
         get

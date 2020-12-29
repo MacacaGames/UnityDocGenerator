@@ -30,7 +30,8 @@ public static class Excuter
         if (string.IsNullOrEmpty(error)) UnityEngine.Debug.LogError(process.StandardError.ReadToEnd());
         return result;
     }
-
+    
+    //From UnityEditor.PackageManager.DocumentationTools.UI
     internal static bool Unzip(string zipFilePath, string destPath)
     {
         string zipper = Utils.Get7zPath;
