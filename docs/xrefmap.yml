@@ -388,6 +388,12 @@ references:
   commentId: T:MacacaGames.DocGenerator.DocGenerator
   fullName: MacacaGames.DocGenerator.DocGenerator
   nameWithType: DocGenerator
+- uid: MacacaGames.DocGenerator.DocGenerator.Instance
+  name: Instance
+  href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_Instance
+  commentId: F:MacacaGames.DocGenerator.DocGenerator.Instance
+  fullName: MacacaGames.DocGenerator.DocGenerator.Instance
+  nameWithType: DocGenerator.Instance
 - uid: MacacaGames.DocGenerator.Metadata
   name: Metadata
   href: api/MacacaGames.DocGenerator.Metadata.html

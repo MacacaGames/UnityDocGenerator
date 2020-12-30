@@ -34,7 +34,7 @@ namespace MacacaGames.DocGenerator
         #region Path
         const string DocFxProject = "Document";
         static string PackageRoot { get { return Path.GetFullPath("packages/com.macacagames.docgenerator"); } }
-        static string SampleDocumentProjectPath => PackageRoot + "/DocFxSample";
+        static string SampleDocumentProjectPath => PackageRoot + "/DocFxTemplate";
         static string DocFxZip => PackageRoot + "/Tools/docfx.7z";
         static string DocWebPath => currentSelectPath + "/docs";
         static string DocFxPath => UnityProjectPath + "/Temp/docfx";
@@ -87,8 +87,8 @@ namespace MacacaGames.DocGenerator
 
                 using (var horizon = new GUILayout.HorizontalScope())
                 {
-                    currentSelectPath = EditorGUILayout.TextField("Project Folder", currentSelectPath);
-                    if (GUILayout.Button("OpenFolder", GUILayout.Width(150)))
+                    currentSelectPath = EditorGUILayout.TextField("Working Folder", currentSelectPath);
+                    if (GUILayout.Button("Select Folder", GUILayout.Width(150)))
                     {
                         currentSelectPath = EditorUtility.OpenFolderPanel("Select Folder", "", "");
                         GetCsproj();
@@ -113,9 +113,10 @@ namespace MacacaGames.DocGenerator
             {
                 using (var vertical = new GUILayout.VerticalScope("box"))
                 {
-                    DrawLabel("Setting");
-
+                    DrawLabel("Metadata");
                     copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
+                    disableDefaultFilter = GUILayout.Toggle(disableDefaultFilter, "Disable Default Filter");
+                    disableGitFeatures = GUILayout.Toggle(disableGitFeatures, "Disable Git Features");
                 }
 
                 using (var vertical = new GUILayout.VerticalScope("box"))
@@ -148,7 +149,9 @@ namespace MacacaGames.DocGenerator
             DrawHosting();
         }
 
-        bool copyReadmeToDocfxIndex = false;
+        bool copyReadmeToDocfxIndex = true;
+        bool disableDefaultFilter = false;
+        bool disableGitFeatures = false;
         void Docfx()
         {
             //ToDo 
@@ -159,20 +162,31 @@ namespace MacacaGames.DocGenerator
             DocFxSetting setting = LitJson.JsonMapper.ToObject<DocFxSetting>(settingFileContent);
 
             setting.build.dest = "../docs";
+            Metadata metadata;
+            setting.metadata.Clear();
             //Create default metadata
             if (setting.metadata == null || setting.metadata.Count <= 0)
             {
-                var metadata = new Metadata();
-                metadata.dest = "api";
-                metadata.disableDefaultFilter = false;
-                metadata.disableGitFeatures = false;
-                setting.metadata.Add(metadata);
+                metadata = new Metadata();
             }
-            setting.metadata[0].src.Clear();
+            else
+            {
+                metadata = setting.metadata[0];
+            }
+            if (metadata.src == null)
+            {
+                metadata.src = new List<Src>();
+            }
+            metadata.src.Clear();
+            metadata.dest = "api";
+            metadata.disableDefaultFilter = disableDefaultFilter;
+            metadata.disableGitFeatures = disableGitFeatures;
+
             var src = new Src();
             src.files = csprojFiles;
             src.src = Utils.GetRelativePath(PackageRoot, UnityProjectPath);
-            setting.metadata[0].src.Add(src);
+            metadata.src.Add(src);
+            setting.metadata.Add(metadata);
 
             var modifiedJson = LitJson.JsonMapper.ToJson(setting);
             File.WriteAllText(DocFxSettingFilePath, modifiedJson);
