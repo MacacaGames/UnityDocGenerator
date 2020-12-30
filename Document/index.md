@@ -9,7 +9,7 @@ A helper to make docfx based document in Unity3D
 ## Installtion
 Add the following line to Packages/manifest.json:
 ```json
-"com.macacagames.macacaapi": "https://github.com/MacacaGames/UnityDocGenerator.git",
+"com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git",
 ```
 
 UnityDocGenerator use LitJson, so add make sure [LitJson](https://litjson.net/) in your project.
@@ -25,7 +25,7 @@ Make sure Mono Framework runtime is installed in your computer.
 [Download Here](https://www.mono-project.com/download/stable/)
 ### Windows
 Make sure MSBuild >= 1.5 is installed in your computer.
-One of the easiest way to install is Install the Visual Studio >= 2013.
+One of the easiest way is Install the Visual Studio >= 2013.
 [Get Visual Studio](https://visualstudio.microsoft.com/zh-hant/downloads/)
 
 ## Getting Started
