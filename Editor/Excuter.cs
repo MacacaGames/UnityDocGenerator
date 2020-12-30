@@ -9,7 +9,7 @@ public static class Excuter
 {
     static string result = "";
     static string error = "";
-    public static (string result, string error) Bash(this string cmd, string workingDirectory = "")
+    public static (int exitCode, string result, string error) Bash(this string cmd, string workingDirectory = "")
     {
 
         ProcessStartInfo startInfo;
@@ -48,6 +48,7 @@ public static class Excuter
 
         // UnityEngine.Debug.Log(escapedArgs);
         process.Start();
+
         string line = process.StandardOutput.ReadLine();
         while (line != null)
         {
@@ -63,7 +64,7 @@ public static class Excuter
             errorLine = process.StandardOutput.ReadLine();
         }
         process.WaitForExit();
-        return (result, error);
+        return (process.ExitCode, result, error);
     }
 
     //From UnityEditor.PackageManager.DocumentationTools.UI

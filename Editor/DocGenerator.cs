@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using UnityEditorInternal;
 
 namespace MacacaGames.DocGenerator
 {
@@ -61,6 +62,10 @@ namespace MacacaGames.DocGenerator
             Instance.minSize = new Vector2(600, 400);
 
         }
+        void OnEnable()
+        {
+            PrepareList();
+        }
 
         string testCmd = "";
         Vector2 scrollPosition;
@@ -72,6 +77,23 @@ namespace MacacaGames.DocGenerator
                 return !string.IsNullOrEmpty(currentSelectPath) && Directory.Exists(currentSelectPath) && Directory.Exists(DocFxProjectPath);
             }
         }
+        ReorderableList list;
+        public void PrepareList()
+        {
+            list = new ReorderableList(copyFolderToDocument, typeof(List<string>), true, false, true, true);
+            list.drawElementCallback += (Rect rect, int index, bool isActive, bool isFocused) =>
+            {
+                copyFolderToDocument[index] = EditorGUI.TextField(rect, copyFolderToDocument[index]);
+            };
+            list.onAddCallback += (ReorderableList list) =>
+            {
+                copyFolderToDocument.Add("");
+            };
+
+        }
+
+
+
         void OnGUI()
         {
             using (var vertical = new GUILayout.VerticalScope("box"))
@@ -111,12 +133,21 @@ namespace MacacaGames.DocGenerator
             }
             using (var disable = new EditorGUI.DisabledGroupScope(!isGenerateAvailable))
             {
-                using (var vertical = new GUILayout.VerticalScope("box"))
+                using (var horizon = new GUILayout.HorizontalScope())
                 {
-                    DrawLabel("Metadata");
-                    copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
-                    disableDefaultFilter = GUILayout.Toggle(disableDefaultFilter, "Disable Default Filter");
-                    disableGitFeatures = GUILayout.Toggle(disableGitFeatures, "Disable Git Features");
+                    using (var vertical = new GUILayout.VerticalScope("box"))
+                    {
+                        DrawLabel("Metadata");
+                        copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
+                        disableDefaultFilter = GUILayout.Toggle(disableDefaultFilter, "Disable Default Filter");
+                        disableGitFeatures = GUILayout.Toggle(disableGitFeatures, "Disable Git Features");
+                    }
+                    using (var vertical = new GUILayout.VerticalScope("box"))
+                    {
+                        DrawLabel("Copy Folder To Document");
+                        GUILayout.Label("Path is relative to Working Folder, will copy to generated document folder");
+                        list.DoLayoutList();
+                    }
                 }
 
                 using (var vertical = new GUILayout.VerticalScope("box"))
@@ -152,6 +183,7 @@ namespace MacacaGames.DocGenerator
         bool copyReadmeToDocfxIndex = true;
         bool disableDefaultFilter = false;
         bool disableGitFeatures = false;
+        List<string> copyFolderToDocument = new List<string>();
         void Docfx()
         {
             //ToDo 
@@ -211,6 +243,31 @@ namespace MacacaGames.DocGenerator
        cmd = $"\"{DocFxExcuablePath}\" \"{DocFxSettingFilePath}\"";
 #endif
             var r = cmd.Bash(DocFxProjectPath);
+
+            // Do something while exit success
+
+            if (Directory.Exists(DocWebPath) && copyFolderToDocument != null && copyFolderToDocument.Count > 0)
+            {
+                foreach (var item in copyFolderToDocument)
+                {
+                    try
+                    {
+                        if (Directory.Exists(DocWebPath + item))
+                        {
+                            Directory.Delete(DocWebPath + item);
+                        }
+
+                        Directory.CreateDirectory(DocWebPath + item);
+                        Utils.DirectoryCopy(currentSelectPath + item, DocWebPath + item);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        Debug.LogError($"error occur while copy folder: {item}, msg: {ex.Message}");
+                    }
+                }
+            }
+
+
             Debug.Log(r.result);
             Debug.LogError(r.error);
         }
@@ -298,9 +355,12 @@ namespace MacacaGames.DocGenerator
 
         static void StopServer()
         {
-            hosting = false;
             if (httpServer != null)
                 httpServer.Stop();
+        }
+        void OnDestroy()
+        {
+            StopServer();
         }
         [UnityEditor.Callbacks.DidReloadScripts]
         private static void OnScriptReload()
