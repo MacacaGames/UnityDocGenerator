@@ -3,6 +3,7 @@ using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
 using UnityEditorInternal;
+using System.Linq;
 
 namespace MacacaGames.DocGenerator
 {
@@ -52,7 +53,20 @@ namespace MacacaGames.DocGenerator
 
         public static DocGenerator Instance;
         static SimpleHTTPServer httpServer;
-        static string currentSelectPath;
+
+        static string _currentSelectPath = "";
+        public static string currentSelectPath
+        {
+            set
+            {
+                _currentSelectPath = value;
+                GetCsproj();
+            }
+            get
+            {
+                return _currentSelectPath;
+            }
+        }
 
         [MenuItem("MacacaGames/DocGenerator")]
         private static void OpenWindow()
@@ -113,7 +127,6 @@ namespace MacacaGames.DocGenerator
                     if (GUILayout.Button("Select Folder", GUILayout.Width(150)))
                     {
                         currentSelectPath = EditorUtility.OpenFolderPanel("Select Folder", "", "");
-                        GetCsproj();
                     }
                 }
 
@@ -273,14 +286,18 @@ namespace MacacaGames.DocGenerator
         }
 
         static List<string> csprojFiles = new List<string>();
-        void GetCsproj()
+        static void GetCsproj()
         {
+            if (string.IsNullOrEmpty(currentSelectPath))
+            {
+                return;
+            }
             //Get csproj from asmdef 
             var asmdefFiles = Directory.GetFiles(currentSelectPath, "*.asmdef", SearchOption.AllDirectories);
             csprojFiles = GetCSProjName(asmdefFiles);
         }
 
-        List<string> GetCSProjName(string[] path)
+        static List<string> GetCSProjName(string[] path)
         {
             List<string> result = new List<string>();
             foreach (var item in path)
@@ -374,6 +391,20 @@ namespace MacacaGames.DocGenerator
             GUILayout.Label(label, EditorStyles.boldLabel);
             // GUILayout.Label("", new GUIStyle("TV Insertion"), GUILayout.Width(position.width));
         }
+
+        [MenuItem("Assets/Open with Unity Doc Generator")]
+        public static void OpenByDocGenerator()
+        {
+            string folderPath = Path.GetFullPath(AssetDatabase.GetAssetPath(Selection.objects.FirstOrDefault()));
+            // if (!string.IsNullOrEmpty(Path.GetExtension(folderPath)))
+            // {
+            //     Debug.LogError("select item is not a folder");
+            //     return;
+            // }
+            OpenWindow();
+            DocGenerator.currentSelectPath = folderPath;
+        }
+
     }
 
 

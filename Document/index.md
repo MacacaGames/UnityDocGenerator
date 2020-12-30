@@ -51,6 +51,10 @@ Type the working folder path or use **Select Folder** select via dialog.
 
 <img src="Img/02.png">
 
+- Tips: In Project window you can use Assets Menu to open a folder directly by click **Open with Unity Doc Generator** (This method may not work corrrectly if the folder name contains the "." char)
+
+<img src="Img/06.png">
+
 UnityDocGenerator will find out all Unity [Assembly definitions](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html) (.asmdef) files inside the folder (include all sub folder) as the DocFx target.
 
 For example, the screeshot shows there will be 2 files set to DocFx target.

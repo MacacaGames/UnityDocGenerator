@@ -388,12 +388,38 @@ references:
   commentId: T:MacacaGames.DocGenerator.DocGenerator
   fullName: MacacaGames.DocGenerator.DocGenerator
   nameWithType: DocGenerator
+- uid: MacacaGames.DocGenerator.DocGenerator.currentSelectPath
+  name: currentSelectPath
+  href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_currentSelectPath
+  commentId: P:MacacaGames.DocGenerator.DocGenerator.currentSelectPath
+  fullName: MacacaGames.DocGenerator.DocGenerator.currentSelectPath
+  nameWithType: DocGenerator.currentSelectPath
+- uid: MacacaGames.DocGenerator.DocGenerator.currentSelectPath*
+  name: currentSelectPath
+  href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_currentSelectPath_
+  commentId: Overload:MacacaGames.DocGenerator.DocGenerator.currentSelectPath
+  isSpec: "True"
+  fullName: MacacaGames.DocGenerator.DocGenerator.currentSelectPath
+  nameWithType: DocGenerator.currentSelectPath
 - uid: MacacaGames.DocGenerator.DocGenerator.Instance
   name: Instance
   href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_Instance
   commentId: F:MacacaGames.DocGenerator.DocGenerator.Instance
   fullName: MacacaGames.DocGenerator.DocGenerator.Instance
   nameWithType: DocGenerator.Instance
+- uid: MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator
+  name: OpenByDocGenerator()
+  href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_OpenByDocGenerator
+  commentId: M:MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator
+  fullName: MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator()
+  nameWithType: DocGenerator.OpenByDocGenerator()
+- uid: MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator*
+  name: OpenByDocGenerator
+  href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_OpenByDocGenerator_
+  commentId: Overload:MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator
+  isSpec: "True"
+  fullName: MacacaGames.DocGenerator.DocGenerator.OpenByDocGenerator
+  nameWithType: DocGenerator.OpenByDocGenerator
 - uid: MacacaGames.DocGenerator.DocGenerator.PrepareList
   name: PrepareList()
   href: api/MacacaGames.DocGenerator.DocGenerator.html#MacacaGames_DocGenerator_DocGenerator_PrepareList
