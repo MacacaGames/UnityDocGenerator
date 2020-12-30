@@ -43,7 +43,7 @@ namespace MacacaGames.DocGenerator
         static string DocFxProjectPath => Path.Combine(currentSelectPath, DocFxProject);
         static string DocFxSettingFilePath => Path.Combine(DocFxProjectPath, "docfx.json");
         static string UnityProjectPath => Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
-        static string ReadmeFilePath => Path.Combine(PackageRoot, "Readme.md");
+        static string ReadmeFilePath => Path.Combine(currentSelectPath, "Readme.md");
         static string MonoPath = "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono";
         #endregion
         #region Command
