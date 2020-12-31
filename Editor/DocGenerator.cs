@@ -263,6 +263,7 @@ namespace MacacaGames.DocGenerator
             {
                 foreach (var item in copyFolderToDocument)
                 {
+                    if (string.IsNullOrEmpty(item)) continue;
                     try
                     {
                         if (Directory.Exists(DocWebPath + item))
@@ -279,7 +280,6 @@ namespace MacacaGames.DocGenerator
                     }
                 }
             }
-
 
             Debug.Log(r.result);
             Debug.LogError(r.error);
@@ -336,7 +336,7 @@ namespace MacacaGames.DocGenerator
                     {
                         string url = $"http://127.0.0.1:{httpPort}/index.html";
                         EditorGUILayout.HelpBox(
-                                           hosting ? $"Go {url} to preview your document" : "Hosting is not running", MessageType.Warning);
+                                           hosting ? $"Go {url} to preview your document \nCurrent hosting root: {httpServer.GetRootDirectory()}" : "Hosting is not running", MessageType.Warning);
                         using (var vertical2 = new GUILayout.VerticalScope("box", GUILayout.Width(100)))
                         {
                             if (GUILayout.Button("Open preview"))
@@ -357,6 +357,7 @@ namespace MacacaGames.DocGenerator
                 }
             }
         }
+
         void SwitchHosting()
         {
             if (hosting)
