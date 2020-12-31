@@ -70,6 +70,8 @@
 <li>Document web preview hosting in Unity3D.</li>
 <li>Tested on Windows Editor, OSX Editor.</li>
 </ul>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>UnityDocGenerator require the package manager ui extension mechanism, which is available from version 1.9.3 or later, or remove PackageManager/DocGeneratorPackageManagerExtension.cs to break the Package Manger UI supportion.</p>
 <h2 id="installtion">Installtion</h2>
 <p>Add the following line to Packages/manifest.json:</p>
 <pre><code class="lang-json">&quot;com.macacagames.docgenerator&quot;: &quot;https://github.com/MacacaGames/UnityDocGenerator.git&quot;,
@@ -78,17 +80,27 @@
 <p>Or using UPM package to install LitJson. (This is a third party package)</p>
 <pre><code class="lang-json">&quot;com.ms.litjson&quot;:&quot;https://github.com/wlgys8/LitJsonUPM.git&quot;,
 </code></pre>
-<h2 id="prereuqired">Prereuqired</h2>
-<h3 id="macos-linux">macOS, Linux</h3>
+<h3 id="environment-setup">Environment Setup</h3>
+<h4 id="macos-linux">macOS, Linux</h4>
 <p>Make sure Mono Framework runtime is installed in your computer.
 <a href="https://www.mono-project.com/download/stable/">Download Here</a></p>
-<h3 id="windows">Windows</h3>
+<h4 id="windows">Windows</h4>
 <p>Make sure MSBuild &gt;= 1.5 is installed in your computer.
 One of the easiest way is Install the Visual Studio &gt;= 2013.
 <a href="https://visualstudio.microsoft.com/zh-hant/downloads/">Get Visual Studio</a></p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="1-open-editor">1. Open Editor</h3>
-<p>Open the editor via Unity's toolbar, MacacaGames &gt; DocGenerator</p>
+<ul>
+<li>Option 1 (recommend): You can press the <strong>Open with Unity Doc Generator</strong> button on an installed packages to open the UnityDocGenerator.</li>
+</ul>
+<img src="Img/07.png">
+<ul>
+<li>Option 2: In Project window you can use Assets Menu to open a folder directly by click <strong>Open with Unity Doc Generator</strong> (This method may not work corrrectly if the folder name contains the &quot;.&quot; char)</li>
+</ul>
+<img src="Img/06.png">
+<ul>
+<li>Option 3: Open the editor via Unity's toolbar, MacacaGames &gt; UnityDocGenerator</li>
+</ul>
 <h3 id="2-get-the-full-path-of-your-mono-install">2. Get the full path of your mono install.</h3>
 <p>macOS, Linux only! Windows user can skip this step.</p>
 <pre><code class="lang-bash">which mono
@@ -99,12 +111,9 @@ One of the easiest way is Install the Visual Studio &gt;= 2013.
 <p>Then paste the value to the Mono Path field on Editor.</p>
 <img src="Img/01.png">
 <h3 id="3-select-your-working-folder">3. Select your working folder</h3>
-<p>Type the working folder path or use <strong>Select Folder</strong> select via dialog.</p>
+<p>Type the working folder path or use <strong>Select Folder</strong> select via dialog.
+(If the Editor is open via Option 1. or Option 2. the value will fill-up automatically)</p>
 <img src="Img/02.png">
-<ul>
-<li>Tips: In Project window you can use Assets Menu to open a folder directly by click <strong>Open with Unity Doc Generator</strong> (This method may not work corrrectly if the folder name contains the &quot;.&quot; char)</li>
-</ul>
-<img src="Img/06.png">
 <p>UnityDocGenerator will find out all Unity <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly definitions</a> (.asmdef) files inside the folder (include all sub folder) as the DocFx target.</p>
 <p>For example, the screeshot shows there will be 2 files set to DocFx target.</p>
 <img src="Img/03.png">
@@ -140,7 +149,6 @@ Only modify them if you understand what you're doing, eg.. more custom modify fo
 </ul>
 <h2 id="todo">TODO</h2>
 <ul>
-<li>Migrate UI into PackageManagerUI ?</li>
 <li>More custom setting for docfx.</li>
 </ul>
 </article>

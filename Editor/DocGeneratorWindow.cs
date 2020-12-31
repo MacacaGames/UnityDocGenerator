@@ -8,7 +8,7 @@ using System.Linq;
 namespace MacacaGames.DocGenerator
 {
 
-    public class DocGenerator : EditorWindow
+    public class DocGeneratorWindow : EditorWindow
     {
         private static string _persistentDataPath;
         internal static string PersistentDataPath
@@ -51,7 +51,7 @@ namespace MacacaGames.DocGenerator
         const int httpPort = 18080;
         #endregion
 
-        public static DocGenerator Instance;
+        public static DocGeneratorWindow Instance;
         static SimpleHTTPServer httpServer;
 
         static string _currentSelectPath = "";
@@ -68,11 +68,11 @@ namespace MacacaGames.DocGenerator
             }
         }
 
-        [MenuItem("MacacaGames/DocGenerator")]
-        private static void OpenWindow()
+        [MenuItem("MacacaGames/UnityDocGenerator")]
+        public static void OpenWindow()
         {
-            Instance = GetWindow<DocGenerator>();
-            Instance.titleContent = new GUIContent("DocGenerator");
+            Instance = GetWindow<DocGeneratorWindow>();
+            Instance.titleContent = new GUIContent("UnityDocGenerator");
             Instance.minSize = new Vector2(600, 400);
 
         }
@@ -268,7 +268,7 @@ namespace MacacaGames.DocGenerator
                     {
                         if (Directory.Exists(DocWebPath + item))
                         {
-                            Directory.Delete(DocWebPath + item);
+                            Directory.Delete(DocWebPath + item, true);
                         }
 
                         Directory.CreateDirectory(DocWebPath + item);
@@ -403,7 +403,7 @@ namespace MacacaGames.DocGenerator
             //     return;
             // }
             OpenWindow();
-            DocGenerator.currentSelectPath = folderPath;
+            DocGeneratorWindow.currentSelectPath = folderPath;
         }
 
     }
