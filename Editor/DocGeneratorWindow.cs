@@ -34,7 +34,9 @@ namespace MacacaGames.DocGenerator
         }
 
         #region Path
-        const string DocFxProject = "Document";
+        public const string DocFxProject = "Document";
+        public const string settingFile = "udg_setting.json";
+        static string MonoPath = "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono";
         static string PackageRoot { get { return Path.GetFullPath("packages/com.macacagames.docgenerator"); } }
         static string SampleDocumentProjectPath => PackageRoot + "/DocFxTemplate";
         static string DocFxZip => PackageRoot + "/Tools/docfx.7z";
@@ -45,7 +47,8 @@ namespace MacacaGames.DocGenerator
         static string DocFxSettingFilePath => Path.Combine(DocFxProjectPath, "docfx.json");
         static string UnityProjectPath => Path.GetFullPath(Path.Combine(Application.dataPath, ".."));
         static string ReadmeFilePath => Path.Combine(currentSelectPath, "Readme.md");
-        static string MonoPath = "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono";
+        static string SettingFilePath => Path.Combine(currentSelectPath, settingFile);
+
         #endregion
         #region Command
         const int httpPort = 18080;
@@ -60,6 +63,7 @@ namespace MacacaGames.DocGenerator
             set
             {
                 _currentSelectPath = value;
+                LoadSetting();
                 GetCsproj();
             }
             get
@@ -76,37 +80,74 @@ namespace MacacaGames.DocGenerator
             Instance.minSize = new Vector2(600, 400);
 
         }
-        void OnEnable()
+        // void OnEnable()
+        // {
+        //     LoadSetting();
+
+        // }
+        static UnityDocGeneratorSetting settings;
+        static void LoadSetting()
         {
+            if (string.IsNullOrEmpty(currentSelectPath))
+            {
+                return;
+            }
+            if (File.Exists(SettingFilePath))
+            {
+                var json = File.ReadAllText(SettingFilePath);
+                try
+                {
+                    settings = LitJson.JsonMapper.ToObject<UnityDocGeneratorSetting>(json);
+                }
+                catch
+                {
+                    Debug.LogError("Loading UnityDocGenerator faild, use default setting");
+                    DefaultSetting();
+                }
+            }
+            else
+            {
+                DefaultSetting();
+
+            }
+
+            void DefaultSetting()
+            {
+                settings = new UnityDocGeneratorSetting();
+                SaveSetting();
+            }
             PrepareList();
+        }
+        static void SaveSetting()
+        {
+            var json = LitJson.JsonMapper.ToJson(settings);
+            File.WriteAllText(SettingFilePath, json);
         }
 
         string testCmd = "";
         Vector2 scrollPosition;
         static bool hosting = false;
-        bool isGenerateAvailable
+        public static bool isGenerateAvailable
         {
             get
             {
                 return !string.IsNullOrEmpty(currentSelectPath) && Directory.Exists(currentSelectPath) && Directory.Exists(DocFxProjectPath);
             }
         }
-        ReorderableList list;
-        public void PrepareList()
+
+        static ReorderableList list;
+        static void PrepareList()
         {
-            list = new ReorderableList(copyFolderToDocument, typeof(List<string>), true, false, true, true);
+            list = new ReorderableList(settings.copyFolderToDocument, typeof(List<string>), true, false, true, true);
             list.drawElementCallback += (Rect rect, int index, bool isActive, bool isFocused) =>
             {
-                copyFolderToDocument[index] = EditorGUI.TextField(rect, copyFolderToDocument[index]);
+                settings.copyFolderToDocument[index] = EditorGUI.TextField(rect, settings.copyFolderToDocument[index]);
             };
             list.onAddCallback += (ReorderableList list) =>
             {
-                copyFolderToDocument.Add("");
+                settings.copyFolderToDocument.Add("");
             };
-
         }
-
-
 
         void OnGUI()
         {
@@ -123,16 +164,11 @@ namespace MacacaGames.DocGenerator
 
                 using (var horizon = new GUILayout.HorizontalScope())
                 {
-                    currentSelectPath = EditorGUILayout.TextField("Working Folder", currentSelectPath);
+                    EditorGUILayout.TextField("Working Folder", currentSelectPath);
                     if (GUILayout.Button("Select Folder", GUILayout.Width(150)))
                     {
                         currentSelectPath = EditorUtility.OpenFolderPanel("Select Folder", "", "");
                     }
-                }
-
-                if (string.IsNullOrEmpty(currentSelectPath))
-                {
-                    GUILayout.Label("No thing select :)");
                 }
 
                 if (Directory.Exists(currentSelectPath) && !Directory.Exists(DocFxProjectPath))
@@ -146,25 +182,34 @@ namespace MacacaGames.DocGenerator
             }
             using (var disable = new EditorGUI.DisabledGroupScope(!isGenerateAvailable))
             {
+                DrawLabel("Settings");
                 using (var horizon = new GUILayout.HorizontalScope())
                 {
-                    using (var vertical = new GUILayout.VerticalScope("box"))
+                    if (settings != null)
                     {
-                        DrawLabel("Metadata");
-                        copyReadmeToDocfxIndex = GUILayout.Toggle(copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
-                        disableDefaultFilter = GUILayout.Toggle(disableDefaultFilter, "Disable Default Filter");
-                        disableGitFeatures = GUILayout.Toggle(disableGitFeatures, "Disable Git Features");
+                        using (var vertical = new GUILayout.VerticalScope("box"))
+                        {
+                            DrawLabel("Metadata");
+                            settings.copyReadmeToDocfxIndex = GUILayout.Toggle(settings.copyReadmeToDocfxIndex, "Copy Readme to Docfx index");
+                            settings.disableDefaultFilter = GUILayout.Toggle(settings.disableDefaultFilter, "Disable Default Filter");
+                            settings.disableGitFeatures = GUILayout.Toggle(settings.disableGitFeatures, "Disable Git Features");
+                        }
+                        using (var vertical = new GUILayout.VerticalScope("box"))
+                        {
+                            DrawLabel("Copy Folder To Document");
+                            GUILayout.Label("Path is relative to Working Folder, will copy to generated document folder");
+                            list.DoLayoutList();
+                        }
                     }
-                    using (var vertical = new GUILayout.VerticalScope("box"))
+                    else
                     {
-                        DrawLabel("Copy Folder To Document");
-                        GUILayout.Label("Path is relative to Working Folder, will copy to generated document folder");
-                        list.DoLayoutList();
+                        EditorGUILayout.HelpBox("No working folder is selected :)", MessageType.Warning);
                     }
                 }
 
                 using (var vertical = new GUILayout.VerticalScope("box"))
                 {
+                    DrawLabel("Assembly definitions");
                     if (csprojFiles == null || csprojFiles.Count == 0)
                     {
                         EditorGUILayout.HelpBox("No Asmdef find in target Folder", MessageType.Error);
@@ -185,6 +230,7 @@ namespace MacacaGames.DocGenerator
                 }
                 if (GUILayout.Button("Generate Document"))
                 {
+                    SaveSetting();
                     Docfx();
                 }
             }
@@ -192,12 +238,11 @@ namespace MacacaGames.DocGenerator
             GUILayout.FlexibleSpace();
             DrawHosting();
         }
-
-        bool copyReadmeToDocfxIndex = true;
-        bool disableDefaultFilter = false;
-        bool disableGitFeatures = false;
-        List<string> copyFolderToDocument = new List<string>();
-        void Docfx()
+        // bool copyReadmeToDocfxIndex = true;
+        // bool disableDefaultFilter = false;
+        // bool disableGitFeatures = false;
+        // List<string> copyFolderToDocument = new List<string>();
+        public void Docfx()
         {
             //ToDo 
             CheckAndPrepareDocfx();
@@ -224,8 +269,8 @@ namespace MacacaGames.DocGenerator
             }
             metadata.src.Clear();
             metadata.dest = "api";
-            metadata.disableDefaultFilter = disableDefaultFilter;
-            metadata.disableGitFeatures = disableGitFeatures;
+            metadata.disableDefaultFilter = settings.disableDefaultFilter;
+            metadata.disableGitFeatures = settings.disableGitFeatures;
 
             var src = new Src();
             src.files = csprojFiles;
@@ -237,7 +282,7 @@ namespace MacacaGames.DocGenerator
             File.WriteAllText(DocFxSettingFilePath, modifiedJson);
 
             // modify index.md
-            if (copyReadmeToDocfxIndex)
+            if (settings.copyReadmeToDocfxIndex)
             {
                 if (File.Exists(ReadmeFilePath))
                 {
@@ -259,9 +304,9 @@ namespace MacacaGames.DocGenerator
 
             // Do something while exit success
 
-            if (Directory.Exists(DocWebPath) && copyFolderToDocument != null && copyFolderToDocument.Count > 0)
+            if (Directory.Exists(DocWebPath) && settings.copyFolderToDocument != null && settings.copyFolderToDocument.Count > 0)
             {
-                foreach (var item in copyFolderToDocument)
+                foreach (var item in settings.copyFolderToDocument)
                 {
                     if (string.IsNullOrEmpty(item)) continue;
                     try

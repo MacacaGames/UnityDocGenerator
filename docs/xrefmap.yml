@@ -459,12 +459,44 @@ references:
   isSpec: "True"
   fullName: MacacaGames.DocGenerator.DocGeneratorWindow.currentSelectPath
   nameWithType: DocGeneratorWindow.currentSelectPath
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.Docfx
+  name: Docfx()
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_Docfx
+  commentId: M:MacacaGames.DocGenerator.DocGeneratorWindow.Docfx
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.Docfx()
+  nameWithType: DocGeneratorWindow.Docfx()
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.Docfx*
+  name: Docfx
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_Docfx_
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorWindow.Docfx
+  isSpec: "True"
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.Docfx
+  nameWithType: DocGeneratorWindow.Docfx
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.DocFxProject
+  name: DocFxProject
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_DocFxProject
+  commentId: F:MacacaGames.DocGenerator.DocGeneratorWindow.DocFxProject
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.DocFxProject
+  nameWithType: DocGeneratorWindow.DocFxProject
 - uid: MacacaGames.DocGenerator.DocGeneratorWindow.Instance
   name: Instance
   href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_Instance
   commentId: F:MacacaGames.DocGenerator.DocGeneratorWindow.Instance
   fullName: MacacaGames.DocGenerator.DocGeneratorWindow.Instance
   nameWithType: DocGeneratorWindow.Instance
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable
+  name: isGenerateAvailable
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_isGenerateAvailable
+  commentId: P:MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable
+  nameWithType: DocGeneratorWindow.isGenerateAvailable
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable*
+  name: isGenerateAvailable
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_isGenerateAvailable_
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable
+  isSpec: "True"
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable
+  nameWithType: DocGeneratorWindow.isGenerateAvailable
 - uid: MacacaGames.DocGenerator.DocGeneratorWindow.OpenByDocGenerator
   name: OpenByDocGenerator()
   href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_OpenByDocGenerator
@@ -491,19 +523,12 @@ references:
   isSpec: "True"
   fullName: MacacaGames.DocGenerator.DocGeneratorWindow.OpenWindow
   nameWithType: DocGeneratorWindow.OpenWindow
-- uid: MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList
-  name: PrepareList()
-  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_PrepareList
-  commentId: M:MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList
-  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList()
-  nameWithType: DocGeneratorWindow.PrepareList()
-- uid: MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList*
-  name: PrepareList
-  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_PrepareList_
-  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList
-  isSpec: "True"
-  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.PrepareList
-  nameWithType: DocGeneratorWindow.PrepareList
+- uid: MacacaGames.DocGenerator.DocGeneratorWindow.settingFile
+  name: settingFile
+  href: api/MacacaGames.DocGenerator.DocGeneratorWindow.html#MacacaGames_DocGenerator_DocGeneratorWindow_settingFile
+  commentId: F:MacacaGames.DocGenerator.DocGeneratorWindow.settingFile
+  fullName: MacacaGames.DocGenerator.DocGeneratorWindow.settingFile
+  nameWithType: DocGeneratorWindow.settingFile
 - uid: MacacaGames.DocGenerator.Metadata
   name: Metadata
   href: api/MacacaGames.DocGenerator.Metadata.html

@@ -99,10 +99,13 @@ UnityDocGenerator use Document/docfx.json as the DocFx setting to generate docum
 
 ```
  - root (The working folder you select)
-  - your sub folder etc..
-  - your files etc..
+  - your sub folders...
+  - your files...
   - Document (The DocFx project generate by UnityDocGenerator)
-  - docs (The generated document)
+    - docfx.json (DocFx setting file)
+    - other docfx project files...
+  - docs (The generated document root)
+  - udg_setting.json (The UnityDocGenerator setting file)
 ```
 
 ## Troubleshooting

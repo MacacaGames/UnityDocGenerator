@@ -17,7 +17,7 @@ namespace MacacaGames.DocGenerator
     public class DocGeneratorPackageMangerExtension : IPackageManagerExtension
     {
         private UnityEditor.PackageManager.PackageInfo packageInfo;
-
+        string packagePath;
         public VisualElement CreateExtensionUI()
         {
             return new IMGUIContainer(OnGUI);
@@ -25,13 +25,27 @@ namespace MacacaGames.DocGenerator
 
         private void OnGUI()
         {
-            if (GUILayout.Button("Open with Unity Doc Generator"))
+            using (var horizon = new GUILayout.HorizontalScope())
             {
-                DocGeneratorWindow.OpenWindow();
-                DocGeneratorWindow.currentSelectPath = System.IO.Path.GetFullPath(packageInfo.assetPath);
-                // Debug.Log(System.IO.Path.GetFullPath(packageInfo.assetPath));
-                // Debug.Log(packageInfo.assetPath);
-                // Debug.Log(packageInfo.resolvedPath);
+                if (GUILayout.Button(new GUIContent("Open with Unity Doc Generator", "Open Unity Doc Generator for more detail settings")))
+                {
+                    DocGeneratorWindow.OpenWindow();
+                    DocGeneratorWindow.currentSelectPath = packagePath;
+                }
+                string p1 = System.IO.Path.Combine(packagePath, DocGeneratorWindow.settingFile);
+                string p2 = System.IO.Path.Combine(packagePath, DocGeneratorWindow.DocFxProject);
+                bool isSettingExsit = System.IO.File.Exists(p1);
+                bool isDocFxDocumentExsit = System.IO.Directory.Exists(p2);
+                bool buildDirectAvailable = !(isSettingExsit && isDocFxDocumentExsit);
+                using (var disable = new EditorGUI.DisabledGroupScope(buildDirectAvailable))
+                {
+                    if (GUILayout.Button(new GUIContent("Generate Doc with last setting", "Require the package has generate document using UnityDocGenerator before")))
+                    {
+                        DocGeneratorWindow.OpenWindow();
+                        DocGeneratorWindow.currentSelectPath = System.IO.Path.GetFullPath(packageInfo.assetPath);
+                        DocGeneratorWindow.Instance.Docfx();
+                    }
+                }
             }
         }
 
@@ -39,8 +53,8 @@ namespace MacacaGames.DocGenerator
         {
             if (packageInfo == this.packageInfo)
                 return;
-
             this.packageInfo = packageInfo;
+            this.packagePath = System.IO.Path.GetFullPath(packageInfo.assetPath);
         }
 
         public void OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo packageInfo) { }
