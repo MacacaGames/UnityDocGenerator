@@ -15,7 +15,7 @@ Add the following line to Packages/manifest.json:
 "com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git",
 ```
 
-UnityDocGenerator use LitJson, so add make sure [LitJson](https://litjson.net/) in your project.
+UnityDocGenerator use LitJson, so make sure [LitJson](https://litjson.net/) in your project.
 
 Or using UPM package to install LitJson. (This is a third party package)
 ```json
