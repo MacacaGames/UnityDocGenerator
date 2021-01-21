@@ -108,6 +108,11 @@ UnityDocGenerator use Document/docfx.json as the DocFx setting to generate docum
   - udg_setting.json (The UnityDocGenerator setting file)
 ```
 
+## Customize
+You can make your change on DocFx project. The DocFx project is under "{ProjectRoot}/Document" folder.
+See <a href="https://dotnet.github.io/docfx/tutorial/walkthrough/advanced_walkthrough.html">DocFx document</a> for more detail to modify.
+
+
 ## Troubleshooting
 - Try to find the error message in Unity Editor Console.
 - Make sure you Mono Framework is install correctlly.

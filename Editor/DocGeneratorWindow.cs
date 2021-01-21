@@ -49,9 +49,10 @@ namespace MacacaGames.DocGenerator
         static string ReadmeFilePath => Path.Combine(currentSelectPath, "Readme.md");
         static string SettingFilePath => Path.Combine(currentSelectPath, settingFile);
 
+
         #endregion
         #region Command
-        const int httpPort = 18080;
+        static int httpPort = 18080;
         #endregion
 
         public static DocGeneratorWindow Instance;
@@ -157,7 +158,15 @@ namespace MacacaGames.DocGenerator
 
                 using (var disable = new EditorGUI.DisabledGroupScope(Application.platform != RuntimePlatform.OSXEditor))
                 {
-                    MonoPath = EditorGUILayout.TextField("Mono Path", MonoPath);
+                    using (var horizon = new EditorGUILayout.HorizontalScope())
+                    {
+                        MonoPath = EditorGUILayout.TextField("Mono Path", MonoPath);
+                        // if (GUILayout.Button("Get", GUILayout.Width(80)))
+                        // {
+                        //     var result = $"which mono".Bash();
+                        //     Debug.Log(result.result);
+                        // }
+                    }
                     // EditorGUILayout.SelectableLabel("Run 'which mono' to get the full mono path which install in your computer");
                     EditorGUILayout.HelpBox("Run 'which mono' to get the full mono path which installed in your computer \n (Only required on macOS or Linux)", MessageType.Info);
                 }
@@ -218,7 +227,7 @@ namespace MacacaGames.DocGenerator
                     {
                         GUILayout.Label($"Found {csprojFiles.Count} asmdef file{(csprojFiles.Count > 1 ? "s" : "")}");
 
-                        using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(150)))
+                        using (var scroll = new EditorGUILayout.ScrollViewScope(scrollPosition, GUILayout.Height(120)))
                         {
                             scrollPosition = scroll.scrollPosition;
                             foreach (var item in csprojFiles)
@@ -277,8 +286,11 @@ namespace MacacaGames.DocGenerator
             src.src = Utils.GetRelativePath(PackageRoot, UnityProjectPath);
             metadata.src.Add(src);
             setting.metadata.Add(metadata);
-
-            var modifiedJson = LitJson.JsonMapper.ToJson(setting);
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            LitJson.JsonWriter writer = new LitJson.JsonWriter(stringBuilder);
+            writer.PrettyPrint = true;
+            LitJson.JsonMapper.ToJson(setting, writer);
+            var modifiedJson = stringBuilder.ToString();
             File.WriteAllText(DocFxSettingFilePath, modifiedJson);
 
             // modify index.md
@@ -306,6 +318,7 @@ namespace MacacaGames.DocGenerator
 
             if (Directory.Exists(DocWebPath) && settings.copyFolderToDocument != null && settings.copyFolderToDocument.Count > 0)
             {
+                //copyFolderToDocument
                 foreach (var item in settings.copyFolderToDocument)
                 {
                     if (string.IsNullOrEmpty(item)) continue;
@@ -384,6 +397,17 @@ namespace MacacaGames.DocGenerator
                                            hosting ? $"Go {url} to preview your document \nCurrent hosting root: {httpServer.GetRootDirectory()}" : "Hosting is not running", MessageType.Warning);
                         using (var vertical2 = new GUILayout.VerticalScope("box", GUILayout.Width(100)))
                         {
+                            using (var check = new EditorGUI.ChangeCheckScope())
+                            {
+                                var t = EditorGUILayout.TextField("Port", httpPort.ToString());
+                                if (check.changed)
+                                {
+                                    if (int.TryParse(t, out int r))
+                                    {
+                                        httpPort = r;
+                                    }
+                                }
+                            }
                             if (GUILayout.Button("Open preview"))
                             {
                                 Application.OpenURL(url);
