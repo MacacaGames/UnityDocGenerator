@@ -12,7 +12,7 @@ UnityDocGenerator require the package manager ui extension mechanism, which is a
 ## Installtion
 Add the following line to Packages/manifest.json:
 ```json
-"com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git",
+"com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.0",
 ```
 
 UnityDocGenerator use LitJson, so make sure [LitJson](https://litjson.net/) in your project.
