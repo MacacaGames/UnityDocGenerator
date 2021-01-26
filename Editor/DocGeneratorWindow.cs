@@ -283,7 +283,7 @@ namespace MacacaGames.DocGenerator
 
             var src = new Src();
             src.files = csprojFiles;
-            src.src = Utils.GetRelativePath(PackageRoot, UnityProjectPath);
+            src.src = Utils.GetRelativePath(currentSelectPath, UnityProjectPath);
             metadata.src.Add(src);
             setting.metadata.Add(metadata);
             System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
