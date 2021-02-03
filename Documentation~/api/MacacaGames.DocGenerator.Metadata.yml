@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.DocGenerator.Metadata
+  commentId: T:MacacaGames.DocGenerator.Metadata
+  id: Metadata
+  parent: MacacaGames.DocGenerator
+  children:
+  - MacacaGames.DocGenerator.Metadata.dest
+  - MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+  - MacacaGames.DocGenerator.Metadata.disableGitFeatures
+  - MacacaGames.DocGenerator.Metadata.filter
+  - MacacaGames.DocGenerator.Metadata.src
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: Metadata
+  fullName: MacacaGames.DocGenerator.Metadata
+  type: Class
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: Metadata
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 47
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Metadata
+    content.vb: >-
+      <Serializable>
+
+      Public Class Metadata
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.DocGenerator.Metadata.src
+  commentId: P:MacacaGames.DocGenerator.Metadata.src
+  id: src
+  parent: MacacaGames.DocGenerator.Metadata
+  langs:
+  - csharp
+  - vb
+  name: src
+  nameWithType: Metadata.src
+  fullName: MacacaGames.DocGenerator.Metadata.src
+  type: Property
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: src
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 50
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public List<Src> src { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{MacacaGames.DocGenerator.Src}
+    content.vb: Public Property src As List(Of Src)
+  overload: MacacaGames.DocGenerator.Metadata.src*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.Metadata.dest
+  commentId: P:MacacaGames.DocGenerator.Metadata.dest
+  id: dest
+  parent: MacacaGames.DocGenerator.Metadata
+  langs:
+  - csharp
+  - vb
+  name: dest
+  nameWithType: Metadata.dest
+  fullName: MacacaGames.DocGenerator.Metadata.dest
+  type: Property
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: dest
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 51
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public string dest { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property dest As String
+  overload: MacacaGames.DocGenerator.Metadata.dest*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.Metadata.disableGitFeatures
+  commentId: P:MacacaGames.DocGenerator.Metadata.disableGitFeatures
+  id: disableGitFeatures
+  parent: MacacaGames.DocGenerator.Metadata
+  langs:
+  - csharp
+  - vb
+  name: disableGitFeatures
+  nameWithType: Metadata.disableGitFeatures
+  fullName: MacacaGames.DocGenerator.Metadata.disableGitFeatures
+  type: Property
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: disableGitFeatures
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 52
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public bool disableGitFeatures { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property disableGitFeatures As Boolean
+  overload: MacacaGames.DocGenerator.Metadata.disableGitFeatures*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+  commentId: P:MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+  id: disableDefaultFilter
+  parent: MacacaGames.DocGenerator.Metadata
+  langs:
+  - csharp
+  - vb
+  name: disableDefaultFilter
+  nameWithType: Metadata.disableDefaultFilter
+  fullName: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+  type: Property
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: disableDefaultFilter
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 53
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public bool disableDefaultFilter { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property disableDefaultFilter As Boolean
+  overload: MacacaGames.DocGenerator.Metadata.disableDefaultFilter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.Metadata.filter
+  commentId: P:MacacaGames.DocGenerator.Metadata.filter
+  id: filter
+  parent: MacacaGames.DocGenerator.Metadata
+  langs:
+  - csharp
+  - vb
+  name: filter
+  nameWithType: Metadata.filter
+  fullName: MacacaGames.DocGenerator.Metadata.filter
+  type: Property
+  source:
+    remote:
+      path: Editor/Model/DocFxSetting.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: filter
+    path: ../Editor/Model/DocFxSetting.cs
+    startLine: 54
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public string filter { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property filter As String
+  overload: MacacaGames.DocGenerator.Metadata.filter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.DocGenerator
+  commentId: N:MacacaGames.DocGenerator
+  name: MacacaGames.DocGenerator
+  nameWithType: MacacaGames.DocGenerator
+  fullName: MacacaGames.DocGenerator
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MacacaGames.DocGenerator.Metadata.src*
+  commentId: Overload:MacacaGames.DocGenerator.Metadata.src
+  name: src
+  nameWithType: Metadata.src
+  fullName: MacacaGames.DocGenerator.Metadata.src
+- uid: System.Collections.Generic.List{MacacaGames.DocGenerator.Src}
+  commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.Src}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Src>
+  nameWithType: List<Src>
+  fullName: System.Collections.Generic.List<MacacaGames.DocGenerator.Src>
+  nameWithType.vb: List(Of Src)
+  fullName.vb: System.Collections.Generic.List(Of MacacaGames.DocGenerator.Src)
+  name.vb: List(Of Src)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MacacaGames.DocGenerator.Src
+    name: Src
+    nameWithType: Src
+    fullName: MacacaGames.DocGenerator.Src
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MacacaGames.DocGenerator.Src
+    name: Src
+    nameWithType: Src
+    fullName: MacacaGames.DocGenerator.Src
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: MacacaGames.DocGenerator.Metadata.dest*
+  commentId: Overload:MacacaGames.DocGenerator.Metadata.dest
+  name: dest
+  nameWithType: Metadata.dest
+  fullName: MacacaGames.DocGenerator.Metadata.dest
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MacacaGames.DocGenerator.Metadata.disableGitFeatures*
+  commentId: Overload:MacacaGames.DocGenerator.Metadata.disableGitFeatures
+  name: disableGitFeatures
+  nameWithType: Metadata.disableGitFeatures
+  fullName: MacacaGames.DocGenerator.Metadata.disableGitFeatures
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MacacaGames.DocGenerator.Metadata.disableDefaultFilter*
+  commentId: Overload:MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+  name: disableDefaultFilter
+  nameWithType: Metadata.disableDefaultFilter
+  fullName: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
+- uid: MacacaGames.DocGenerator.Metadata.filter*
+  commentId: Overload:MacacaGames.DocGenerator.Metadata.filter
+  name: filter
+  nameWithType: Metadata.filter
+  fullName: MacacaGames.DocGenerator.Metadata.filter

@@ -3,28 +3,30 @@ using System.Collections.Generic;
 namespace MacacaGames.DocGenerator
 {
     [System.Serializable]
-    public class VersionDefine    {
-        public string name { get; set; } 
-        public string expression { get; set; } 
-        public string define { get; set; } 
+    public class VersionDefine
+    {
+        public string name { get; set; }
+        public string expression { get; set; }
+        public string define { get; set; }
     }
 
     /// <summary>
     /// AsmdefFile json model
     /// </summary>
     [System.Serializable]
-    public class AsmdefFile    {
-        public string name { get; set; } 
-        public List<string> references { get; set; } 
-        public List<string> includePlatforms { get; set; } 
-        public List<string> excludePlatforms { get; set; } 
-        public bool allowUnsafeCode { get; set; } 
-        public bool overrideReferences { get; set; } 
-        public List<string> precompiledReferences { get; set; } 
-        public bool autoReferenced { get; set; } 
-        public List<string> defineConstraints { get; set; } 
-        public List<VersionDefine> versionDefines { get; set; } 
-        public bool noEngineReferences { get; set; } 
+    public class AsmdefFile
+    {
+        public string name { get; set; }
+        public List<string> references { get; set; }
+        public List<string> includePlatforms { get; set; }
+        public List<string> excludePlatforms { get; set; }
+        public bool allowUnsafeCode { get; set; }
+        public bool overrideReferences { get; set; }
+        public List<string> precompiledReferences { get; set; }
+        public bool autoReferenced { get; set; }
+        public List<string> defineConstraints { get; set; }
+        public List<VersionDefine> versionDefines { get; set; }
+        public bool noEngineReferences { get; set; }
     }
 
     /// <summary>
@@ -50,17 +52,20 @@ namespace MacacaGames.DocGenerator
         public string dest { get; set; }
         public bool disableGitFeatures { get; set; }
         public bool disableDefaultFilter { get; set; }
+        public string filter { get; set; } = "";
     }
 
     [System.Serializable]
     public class Content
     {
+        public string src { get; set; } = "";
         public List<string> files { get; set; }
     }
 
     [System.Serializable]
     public class Resource
     {
+        public string src { get; set; } = "";
         public List<string> files { get; set; }
     }
 

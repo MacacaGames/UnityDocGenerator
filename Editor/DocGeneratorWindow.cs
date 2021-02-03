@@ -34,13 +34,14 @@ namespace MacacaGames.DocGenerator
         }
 
         #region Path
-        public const string DocFxProject = "Document";
+        public const string DocFxProject = ".docfx_project";
         public const string settingFile = "udg_setting.json";
         static string MonoPath = "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono";
         static string PackageRoot { get { return Path.GetFullPath("packages/com.macacagames.docgenerator"); } }
-        static string SampleDocumentProjectPath => PackageRoot + "/DocFxTemplate";
-        static string DocFxZip => PackageRoot + "/Tools/docfx.7z";
-        static string DocWebPath => currentSelectPath + "/docs";
+        static string SampleDocumentProjectPath => PackageRoot + "/DocFxTemplate~";
+        static string DocFxZip => PackageRoot + "/Tools~/docfx.7z";
+        static string DocWebPath => currentSelectPath + "/docs~";
+        static string BuildDest => "../docs~";
         static string DocFxPath => UnityProjectPath + "/Temp/docfx";
         static string DocFxExcuablePath => DocFxPath + "/docfx/docfx.exe";
         static string DocFxProjectPath => Path.Combine(currentSelectPath, DocFxProject);
@@ -260,7 +261,7 @@ namespace MacacaGames.DocGenerator
             var settingFileContent = File.ReadAllText(DocFxSettingFilePath);
             DocFxSetting setting = LitJson.JsonMapper.ToObject<DocFxSetting>(settingFileContent);
 
-            setting.build.dest = "../docs";
+            setting.build.dest = BuildDest;
             Metadata metadata;
             setting.metadata.Clear();
             //Create default metadata
@@ -276,8 +277,7 @@ namespace MacacaGames.DocGenerator
             {
                 metadata.src = new List<Src>();
             }
-            metadata.src.Clear();
-            metadata.dest = "api";
+            metadata.dest= "../Documentation~/api";
             metadata.disableDefaultFilter = settings.disableDefaultFilter;
             metadata.disableGitFeatures = settings.disableGitFeatures;
 

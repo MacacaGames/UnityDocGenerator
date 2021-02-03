@@ -1,0 +1,672 @@
+### YamlMime:ManagedReference
+items:
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  commentId: T:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  id: DocGeneratorPackageMangerExtension
+  parent: MacacaGames.DocGenerator
+  children:
+  - MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI
+  - MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  - MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  - MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  langs:
+  - csharp
+  - vb
+  name: DocGeneratorPackageMangerExtension
+  nameWithType: DocGeneratorPackageMangerExtension
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  type: Class
+  source:
+    remote:
+      path: Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: DocGeneratorPackageMangerExtension
+    path: ../Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+    startLine: 15
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: >-
+      [InitializeOnLoad]
+
+      public class DocGeneratorPackageMangerExtension : IPackageManagerExtension
+    content.vb: >-
+      <InitializeOnLoad>
+
+      Public Class DocGeneratorPackageMangerExtension
+
+          Implements IPackageManagerExtension
+  inheritance:
+  - System.Object
+  implements:
+  - UnityEditor.PackageManager.UI.IPackageManagerExtension
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: UnityEditor.InitializeOnLoadAttribute
+    ctor: UnityEditor.InitializeOnLoadAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI
+  commentId: M:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI
+  id: CreateExtensionUI
+  parent: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  langs:
+  - csharp
+  - vb
+  name: CreateExtensionUI()
+  nameWithType: DocGeneratorPackageMangerExtension.CreateExtensionUI()
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI()
+  type: Method
+  source:
+    remote:
+      path: Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: CreateExtensionUI
+    path: ../Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+    startLine: 20
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public VisualElement CreateExtensionUI()
+    return:
+      type: VisualElement
+    content.vb: Public Function CreateExtensionUI As VisualElement
+  overload: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  id: OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  parent: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  langs:
+  - csharp
+  - vb
+  name: OnPackageSelectionChange(PackageInfo)
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageSelectionChange(PackageInfo)
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  type: Method
+  source:
+    remote:
+      path: Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: OnPackageSelectionChange
+    path: ../Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+    startLine: 51
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public void OnPackageSelectionChange(PackageInfo packageInfo)
+    parameters:
+    - id: packageInfo
+      type: UnityEditor.PackageManager.PackageInfo
+    content.vb: Public Sub OnPackageSelectionChange(packageInfo As PackageInfo)
+  overload: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange*
+  implements:
+  - UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  id: OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  parent: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  langs:
+  - csharp
+  - vb
+  name: OnPackageAddedOrUpdated(PackageInfo)
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated(PackageInfo)
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  type: Method
+  source:
+    remote:
+      path: Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: OnPackageAddedOrUpdated
+    path: ../Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+    startLine: 59
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public void OnPackageAddedOrUpdated(PackageInfo packageInfo)
+    parameters:
+    - id: packageInfo
+      type: UnityEditor.PackageManager.PackageInfo
+    content.vb: Public Sub OnPackageAddedOrUpdated(packageInfo As PackageInfo)
+  overload: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated*
+  implements:
+  - UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  id: OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  parent: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+  langs:
+  - csharp
+  - vb
+  name: OnPackageRemoved(PackageInfo)
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageRemoved(PackageInfo)
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  type: Method
+  source:
+    remote:
+      path: Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+      branch: master
+      repo: git@github.com:MacacaGames/UnityDocGenerator.git
+    id: OnPackageRemoved
+    path: ../Editor/PackageManger/DocGeneratorPackageMangerExtension.cs
+    startLine: 60
+  assemblies:
+  - Macaca.DocGenerator
+  namespace: MacacaGames.DocGenerator
+  syntax:
+    content: public void OnPackageRemoved(PackageInfo packageInfo)
+    parameters:
+    - id: packageInfo
+      type: UnityEditor.PackageManager.PackageInfo
+    content.vb: Public Sub OnPackageRemoved(packageInfo As PackageInfo)
+  overload: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved*
+  implements:
+  - UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MacacaGames.DocGenerator
+  commentId: N:MacacaGames.DocGenerator
+  name: MacacaGames.DocGenerator
+  nameWithType: MacacaGames.DocGenerator
+  fullName: MacacaGames.DocGenerator
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEditor.PackageManager.UI.IPackageManagerExtension
+  commentId: T:UnityEditor.PackageManager.UI.IPackageManagerExtension
+  parent: UnityEditor.PackageManager.UI
+  isExternal: true
+  name: IPackageManagerExtension
+  nameWithType: IPackageManagerExtension
+  fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEditor.PackageManager.UI
+  commentId: N:UnityEditor.PackageManager.UI
+  isExternal: true
+  name: UnityEditor.PackageManager.UI
+  nameWithType: UnityEditor.PackageManager.UI
+  fullName: UnityEditor.PackageManager.UI
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI*
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI
+  name: CreateExtensionUI
+  nameWithType: DocGeneratorPackageMangerExtension.CreateExtensionUI
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.CreateExtensionUI
+- uid: VisualElement
+  commentId: '!:VisualElement'
+  isExternal: true
+  name: VisualElement
+  nameWithType: VisualElement
+  fullName: VisualElement
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange*
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange
+  name: OnPackageSelectionChange
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageSelectionChange
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageSelectionChange
+- uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  parent: UnityEditor.PackageManager.UI.IPackageManagerExtension
+  isExternal: true
+  name: OnPackageSelectionChange(PackageInfo)
+  nameWithType: IPackageManagerExtension.OnPackageSelectionChange(PackageInfo)
+  fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+  spec.csharp:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageSelectionChange
+    nameWithType: IPackageManagerExtension.OnPackageSelectionChange
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageSelectionChange
+    nameWithType: IPackageManagerExtension.OnPackageSelectionChange
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageSelectionChange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEditor.PackageManager.PackageInfo
+  commentId: T:UnityEditor.PackageManager.PackageInfo
+  parent: UnityEditor.PackageManager
+  isExternal: true
+  name: PackageInfo
+  nameWithType: PackageInfo
+  fullName: UnityEditor.PackageManager.PackageInfo
+- uid: UnityEditor.PackageManager
+  commentId: N:UnityEditor.PackageManager
+  isExternal: true
+  name: UnityEditor.PackageManager
+  nameWithType: UnityEditor.PackageManager
+  fullName: UnityEditor.PackageManager
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated*
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated
+  name: OnPackageAddedOrUpdated
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageAddedOrUpdated
+- uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  parent: UnityEditor.PackageManager.UI.IPackageManagerExtension
+  isExternal: true
+  name: OnPackageAddedOrUpdated(PackageInfo)
+  nameWithType: IPackageManagerExtension.OnPackageAddedOrUpdated(PackageInfo)
+  fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+  spec.csharp:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageAddedOrUpdated
+    nameWithType: IPackageManagerExtension.OnPackageAddedOrUpdated
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageAddedOrUpdated
+    nameWithType: IPackageManagerExtension.OnPackageAddedOrUpdated
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageAddedOrUpdated
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved*
+  commentId: Overload:MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved
+  name: OnPackageRemoved
+  nameWithType: DocGeneratorPackageMangerExtension.OnPackageRemoved
+  fullName: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.OnPackageRemoved
+- uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  commentId: M:UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  parent: UnityEditor.PackageManager.UI.IPackageManagerExtension
+  isExternal: true
+  name: OnPackageRemoved(PackageInfo)
+  nameWithType: IPackageManagerExtension.OnPackageRemoved(PackageInfo)
+  fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+  spec.csharp:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageRemoved
+    nameWithType: IPackageManagerExtension.OnPackageRemoved
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved(UnityEditor.PackageManager.PackageInfo)
+    name: OnPackageRemoved
+    nameWithType: IPackageManagerExtension.OnPackageRemoved
+    fullName: UnityEditor.PackageManager.UI.IPackageManagerExtension.OnPackageRemoved
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEditor.PackageManager.PackageInfo
+    name: PackageInfo
+    nameWithType: PackageInfo
+    fullName: UnityEditor.PackageManager.PackageInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

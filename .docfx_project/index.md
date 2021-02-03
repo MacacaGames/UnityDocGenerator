@@ -88,28 +88,28 @@ Hosgint power by [sableangle/UnityHTTPServer](https://github.com/sableangle/Unit
 
 ### 6. Next Step?
 Upload your document to your web server.
-The generated html document is in ``/docs~`` folder
+
+The Project is already optimized for [Github Page](https://pages.github.com/), so you can just push and enable it on your repository.
 
 ## Project Struction
 UnityDocGenerator will generate two folders in your working folder.
 Only modify them if you understand what you're doing, eg.. more custom modify for docfx.
 
-UnityDocGenerator use .docfx_project/docfx.json as the DocFx setting to generate document.
+UnityDocGenerator use Document/docfx.json as the DocFx setting to generate document.
 
 ```
- ─ root (The working folder you select)
-  └─ /your sub folders...
-  └─ your files...
-  └─ /.docfx_project (The DocFx project generate by UnityDocGenerator)
-    └─ docfx.json (DocFx setting file)
-    └─ other docfx project files...
-  └─ /docs~ (The generated html document)
-  └─ /Documentation~ (The generated document)
-  └─ udg_setting.json (The UnityDocGenerator setting file)
+ - root (The working folder you select)
+  - your sub folders...
+  - your files...
+  - Document (The DocFx project generate by UnityDocGenerator)
+    - docfx.json (DocFx setting file)
+    - other docfx project files...
+  - docs (The generated document root)
+  - udg_setting.json (The UnityDocGenerator setting file)
 ```
 
 ## Customize
-You can make your change on DocFx project. The DocFx project is under "{ProjectRoot}/.docfx_project" folder.
+You can make your change on DocFx project. The DocFx project is under "{ProjectRoot}/Document" folder.
 See <a href="https://dotnet.github.io/docfx/tutorial/walkthrough/advanced_walkthrough.html">DocFx document</a> for more detail to modify.
 
 

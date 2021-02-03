@@ -1,0 +1,26 @@
+### YamlMime:TableOfContent
+- uid: MacacaGames.DocGenerator
+  name: MacacaGames.DocGenerator
+  items:
+  - uid: MacacaGames.DocGenerator.AsmdefFile
+    name: AsmdefFile
+  - uid: MacacaGames.DocGenerator.Build
+    name: Build
+  - uid: MacacaGames.DocGenerator.Content
+    name: Content
+  - uid: MacacaGames.DocGenerator.DocFxSetting
+    name: DocFxSetting
+  - uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
+    name: DocGeneratorPackageMangerExtension
+  - uid: MacacaGames.DocGenerator.DocGeneratorWindow
+    name: DocGeneratorWindow
+  - uid: MacacaGames.DocGenerator.Metadata
+    name: Metadata
+  - uid: MacacaGames.DocGenerator.Overwrite
+    name: Overwrite
+  - uid: MacacaGames.DocGenerator.Resource
+    name: Resource
+  - uid: MacacaGames.DocGenerator.Src
+    name: Src
+  - uid: MacacaGames.DocGenerator.VersionDefine
+    name: VersionDefine
