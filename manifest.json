@@ -1,0 +1,280 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/miki/Documents/SquidBeat/SB_Unity/Packages/DocGenerator/.docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.AsmdefFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.AsmdefFile.html",
+          "hash": "/d02ZWUnppmBFs+amuBUOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Build.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Build.html",
+          "hash": "dtOH4K3jmDFXvB0YxQ9YVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Content.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Content.html",
+          "hash": "l+dHuwsHCDoXbmeP2Hg1qA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.DocFxSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.DocFxSetting.html",
+          "hash": "9Xz2hKSBfGAQOHHGaGYE9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension.html",
+          "hash": "D+UYxTmkTrDV/6kXSYSKKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.DocGeneratorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.DocGeneratorWindow.html",
+          "hash": "0Qev9BGWMo3T0/dCYLw+WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Metadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Metadata.html",
+          "hash": "xwZyhOMzfjWi7nD9QSt4kQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Overwrite.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Overwrite.html",
+          "hash": "VtuetrA1LreIxygXcmu2lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Resource.html",
+          "hash": "Xq/SPnnYlsp2Cnvd+etg6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.Src.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.Src.html",
+          "hash": "jGZigMKjmNRpYV/e/r3/HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.VersionDefine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.VersionDefine.html",
+          "hash": "NsX7D/nO5XH4EJPLwwu5pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../Documentation~/api/MacacaGames.DocGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MacacaGames.DocGenerator.html",
+          "hash": "uSq0UnyJCIoePVYwHiic3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../Documentation~/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "oS+ly3k9XGZbN1pViAPoGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "azwABIBW3BTUe3ceGKrkZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "NiNpmLX+113hkuitiTgEug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "am/S9vBmE9qrVa4lJLnXaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 12,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

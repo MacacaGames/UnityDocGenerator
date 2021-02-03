@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UnityDocGenerator </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UnityDocGenerator ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="unitydocgenerator">UnityDocGenerator</h1>
+
+<p>A helper to make docfx based document in Unity3D</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Document generate based on <a href="https://github.com/dotnet/docfx">Docfx</a> in Unity3D</li>
+<li>Generate document depend on Unity <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly definitions</a> (.asmdef) files.</li>
+<li>Document web preview hosting in Unity3D.</li>
+<li>Tested on Windows Editor, OSX Editor.</li>
+</ul>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<p>UnityDocGenerator require the package manager ui extension mechanism, which is available from version 1.9.3 or later, or remove PackageManager/DocGeneratorPackageManagerExtension.cs to break the Package Manger UI supportion.</p>
+<h2 id="installtion">Installtion</h2>
+<p>Add the following line to Packages/manifest.json:</p>
+<pre><code class="lang-json">&quot;com.macacagames.docgenerator&quot;: &quot;https://github.com/MacacaGames/UnityDocGenerator.git#1.0.0&quot;,
+</code></pre>
+<p>UnityDocGenerator use LitJson, so make sure <a href="https://litjson.net/">LitJson</a> in your project.</p>
+<p>Or using UPM package to install LitJson. (This is a third party package)</p>
+<pre><code class="lang-json">&quot;com.ms.litjson&quot;:&quot;https://github.com/wlgys8/LitJsonUPM.git&quot;,
+</code></pre>
+<h3 id="environment-setup">Environment Setup</h3>
+<h4 id="macos-linux">macOS, Linux</h4>
+<p>Make sure Mono Framework runtime is installed in your computer.
+<a href="https://www.mono-project.com/download/stable/">Download Here</a></p>
+<h4 id="windows">Windows</h4>
+<p>Make sure MSBuild &gt;= 1.5 is installed in your computer.
+One of the easiest way is Install the Visual Studio &gt;= 2013.
+<a href="https://visualstudio.microsoft.com/zh-hant/downloads/">Get Visual Studio</a></p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="1-open-editor">1. Open Editor</h3>
+<ul>
+<li>Option 1 (recommend): You can press the <strong>Open with Unity Doc Generator</strong> button on an installed packages to open the UnityDocGenerator.</li>
+</ul>
+<img src="Img~/07.png">
+<ul>
+<li>Option 2: In Project window you can use Assets Menu to open a folder directly by click <strong>Open with Unity Doc Generator</strong> (This method may not work corrrectly if the folder name contains the &quot;.&quot; char)</li>
+</ul>
+<img src="Img~/06.png">
+<ul>
+<li>Option 3: Open the editor via Unity's toolbar, MacacaGames &gt; UnityDocGenerator</li>
+</ul>
+<h3 id="2-get-the-full-path-of-your-mono-install">2. Get the full path of your mono install.</h3>
+<p>macOS, Linux only! Windows user can skip this step.</p>
+<pre><code class="lang-bash">which mono
+</code></pre>
+<p>If the Mono Framework is install correctlly, you may got the return like this.</p>
+<pre><code class="lang-bash">/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono
+</code></pre>
+<p>Then paste the value to the Mono Path field on Editor.</p>
+<img src="Img~/01.png">
+<h3 id="3-select-your-working-folder">3. Select your working folder</h3>
+<p>Type the working folder path or use <strong>Select Folder</strong> select via dialog.
+(If the Editor is open via Option 1. or Option 2. the value will fill-up automatically)</p>
+<img src="Img~/02.png">
+<p>UnityDocGenerator will find out all Unity <a href="https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html">Assembly definitions</a> (.asmdef) files inside the folder (include all sub folder) as the DocFx target.</p>
+<p>For example, the screeshot shows there will be 2 files set to DocFx target.</p>
+<img src="Img~/03.png">
+<h3 id="4-generate">4. Generate!!</h3>
+<p>Click <strong>Generate Document</strong> and wait for the task complete.
+The Unity Editor may hangs during the docfx runing, it is normal and usually resume in 1 min (Based on your project size).</p>
+<p>You can see the DocFx result in Unity Editor Console.</p>
+<img src="Img~/04.png">
+<h3 id="5-hosting-and-preview-optional">5. Hosting and preview (Optional)</h3>
+<p>You can preview you generated document via UnityDocGenerator.
+Click <strong>Start Hosting</strong> to enable hosting, navigate to <a href="http://127.0.0.1:18080/index">http://127.0.0.1:18080/index</a> to view your generated document.</p>
+<p>Hosgint power by <a href="https://github.com/sableangle/UnityHTTPServer">sableangle/UnityHTTPServer</a></p>
+<img src="Img~/05.png">
+<h3 id="6-next-step">6. Next Step?</h3>
+<p>Upload your document to your web server.</p>
+<p>The Project is already optimized for <a href="https://pages.github.com/">Github Page</a>, so you can just push and enable it on your repository.</p>
+<h2 id="project-struction">Project Struction</h2>
+<p>UnityDocGenerator will generate two folders in your working folder.
+Only modify them if you understand what you're doing, eg.. more custom modify for docfx.</p>
+<p>UnityDocGenerator use Document/docfx.json as the DocFx setting to generate document.</p>
+<pre><code> - root (The working folder you select)
+  - your sub folders...
+  - your files...
+  - Document (The DocFx project generate by UnityDocGenerator)
+    - docfx.json (DocFx setting file)
+    - other docfx project files...
+  - docs (The generated document root)
+  - udg_setting.json (The UnityDocGenerator setting file)
+</code></pre>
+<h2 id="customize">Customize</h2>
+<p>You can make your change on DocFx project. The DocFx project is under &quot;{ProjectRoot}/Document&quot; folder.
+See <a href="https://dotnet.github.io/docfx/tutorial/walkthrough/advanced_walkthrough.html">DocFx document</a> for more detail to modify.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Try to find the error message in Unity Editor Console.</li>
+<li>Make sure you Mono Framework is install correctlly.</li>
+<li>Open an issue on Github if there is any bug, and provide the project which reproduce the issue (if possiable).</li>
+<li>Linux Editor is supported in theory but not tested.</li>
+</ul>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>More custom setting for docfx.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/.docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
