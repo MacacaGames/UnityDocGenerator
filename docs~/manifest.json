@@ -12,7 +12,7 @@
           "hash": "/d02ZWUnppmBFs+amuBUOA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "dtOH4K3jmDFXvB0YxQ9YVw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "l+dHuwsHCDoXbmeP2Hg1qA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "9Xz2hKSBfGAQOHHGaGYE9w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.DocGenerator.DocGeneratorWindow.html",
-          "hash": "0Qev9BGWMo3T0/dCYLw+WA=="
+          "hash": "KiC777C1WhvK04qUV/sYnQ=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
           "hash": "xwZyhOMzfjWi7nD9QSt4kQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "VtuetrA1LreIxygXcmu2lw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "Xq/SPnnYlsp2Cnvd+etg6A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "jGZigMKjmNRpYV/e/r3/HA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -132,7 +132,7 @@
           "hash": "NsX7D/nO5XH4EJPLwwu5pw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MacacaGames.DocGenerator.html",
-          "hash": "uSq0UnyJCIoePVYwHiic3A=="
+          "hash": "IJjDtb8l71xcsqbSEEoRiA=="
         }
       },
       "is_incremental": false,
@@ -168,7 +168,7 @@
           "hash": "azwABIBW3BTUe3ceGKrkZA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -191,7 +191,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "NiNpmLX+113hkuitiTgEug=="
+          "hash": "uc46pLu3017qENkhodw41g=="
         }
       },
       "is_incremental": false,
@@ -224,25 +224,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
+          "skipped_file_count": 1
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 12,
-          "skipped_file_count": 0
+          "skipped_file_count": 10
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
@@ -262,8 +260,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

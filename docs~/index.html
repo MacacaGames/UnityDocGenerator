@@ -128,23 +128,24 @@ Click <strong>Start Hosting</strong> to enable hosting, navigate to <a href="htt
 <p>Hosgint power by <a href="https://github.com/sableangle/UnityHTTPServer">sableangle/UnityHTTPServer</a></p>
 <img src="Img~/05.png">
 <h3 id="6-next-step">6. Next Step?</h3>
-<p>Upload your document to your web server.</p>
-<p>The Project is already optimized for <a href="https://pages.github.com/">Github Page</a>, so you can just push and enable it on your repository.</p>
+<p>Upload your document to your web server.
+The generated html document is in <code>/docs~</code> folder</p>
 <h2 id="project-struction">Project Struction</h2>
 <p>UnityDocGenerator will generate two folders in your working folder.
 Only modify them if you understand what you're doing, eg.. more custom modify for docfx.</p>
-<p>UnityDocGenerator use Document/docfx.json as the DocFx setting to generate document.</p>
-<pre><code> - root (The working folder you select)
-  - your sub folders...
-  - your files...
-  - Document (The DocFx project generate by UnityDocGenerator)
-    - docfx.json (DocFx setting file)
-    - other docfx project files...
-  - docs (The generated document root)
-  - udg_setting.json (The UnityDocGenerator setting file)
+<p>UnityDocGenerator use .docfx_project/docfx.json as the DocFx setting to generate document.</p>
+<pre><code> ─ root (The working folder you select)
+  └─ /your sub folders...
+  └─ your files...
+  └─ /.docfx_project (The DocFx project generate by UnityDocGenerator)
+    └─ docfx.json (DocFx setting file)
+    └─ other docfx project files...
+  └─ /docs~ (The generated html document)
+  └─ /Documentation~ (The generated document)
+  └─ udg_setting.json (The UnityDocGenerator setting file)
 </code></pre>
 <h2 id="customize">Customize</h2>
-<p>You can make your change on DocFx project. The DocFx project is under &quot;{ProjectRoot}/Document&quot; folder.
+<p>You can make your change on DocFx project. The DocFx project is under &quot;{ProjectRoot}/.docfx_project&quot; folder.
 See <a href="https://dotnet.github.io/docfx/tutorial/walkthrough/advanced_walkthrough.html">DocFx document</a> for more detail to modify.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <ul>

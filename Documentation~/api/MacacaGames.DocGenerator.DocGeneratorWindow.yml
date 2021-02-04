@@ -27,15 +27,16 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: DocGeneratorWindow
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
+  summary: "\nThe main code\n"
+  example: []
   syntax:
     content: 'public class DocGeneratorWindow : EditorWindow'
     content.vb: >-
       Public Class DocGeneratorWindow
-
           Inherits EditorWindow
   inheritance:
   - System.Object
@@ -163,7 +164,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: DocFxProject
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 36
+    startLine: 38
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -196,7 +197,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: settingFile
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -229,7 +230,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Instance
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 58
+    startLine: 60
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -262,7 +263,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: currentSelectPath
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 62
+    startLine: 64
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -299,7 +300,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: OpenWindow
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 76
+    startLine: 78
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -343,7 +344,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: isGenerateAvailable
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 131
+    startLine: 133
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -380,7 +381,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Docfx
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 254
+    startLine: 256
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -410,7 +411,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: OpenByDocGenerator
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 464
+    startLine: 466
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator

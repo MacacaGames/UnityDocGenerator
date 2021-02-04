@@ -7,7 +7,9 @@ using System.Linq;
 
 namespace MacacaGames.DocGenerator
 {
-
+    /// <summary>
+    /// The main code
+    /// </summary>
     public class DocGeneratorWindow : EditorWindow
     {
         private static string _persistentDataPath;
@@ -277,7 +279,7 @@ namespace MacacaGames.DocGenerator
             {
                 metadata.src = new List<Src>();
             }
-            metadata.dest= "../Documentation~/api";
+            metadata.dest = "../Documentation~/api";
             metadata.disableDefaultFilter = settings.disableDefaultFilter;
             metadata.disableGitFeatures = settings.disableGitFeatures;
 

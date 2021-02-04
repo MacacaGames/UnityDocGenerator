@@ -36,7 +36,6 @@ items:
       <InitializeOnLoad>
 
       Public Class DocGeneratorPackageMangerExtension
-
           Implements IPackageManagerExtension
   inheritance:
   - System.Object
