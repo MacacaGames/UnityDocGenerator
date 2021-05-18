@@ -73,8 +73,7 @@
   
   <h1 id="MacacaGames_DocGenerator_DocGeneratorWindow" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow" class="text-break">Class DocGeneratorWindow
   </h1>
-  <div class="markdown level0 summary"><p>The main code</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -207,6 +206,9 @@
       <span class="xref">UnityEditor.EditorWindow.GetWindowWithRect&lt;T&gt;(UnityEngine.Rect, System.Boolean, System.String, System.Boolean)</span>
     </div>
     <div>
+      <span class="xref">UnityEditor.EditorWindow.SaveChanges()</span>
+    </div>
+    <div>
       <span class="xref">UnityEditor.EditorWindow.Close()</span>
     </div>
     <div>
@@ -228,16 +230,31 @@
       <span class="xref">UnityEditor.EditorWindow.wantsMouseEnterLeaveWindow</span>
     </div>
     <div>
+      <span class="xref">UnityEditor.EditorWindow.wantsLessLayoutEvents</span>
+    </div>
+    <div>
       <span class="xref">UnityEditor.EditorWindow.autoRepaintOnSceneChange</span>
     </div>
     <div>
       <span class="xref">UnityEditor.EditorWindow.maximized</span>
     </div>
     <div>
+      <span class="xref">UnityEditor.EditorWindow.hasFocus</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.EditorWindow.docked</span>
+    </div>
+    <div>
       <span class="xref">UnityEditor.EditorWindow.focusedWindow</span>
     </div>
     <div>
       <span class="xref">UnityEditor.EditorWindow.mouseOverWindow</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.EditorWindow.hasUnsavedChanges</span>
+    </div>
+    <div>
+      <span class="xref">UnityEditor.EditorWindow.saveChangesMessage</span>
     </div>
     <div>
       <span class="xref">UnityEditor.EditorWindow.minSize</span>
@@ -327,6 +344,9 @@
       <span class="xref">UnityEngine.Object.FindObjectsOfType(System.Type)</span>
     </div>
     <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType(System.Type, System.Boolean)</span>
+    </div>
+    <div>
       <span class="xref">UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)</span>
     </div>
     <div>
@@ -345,13 +365,22 @@
       <span class="xref">UnityEngine.Object.FindObjectsOfType&lt;T&gt;()</span>
     </div>
     <div>
+      <span class="xref">UnityEngine.Object.FindObjectsOfType&lt;T&gt;(System.Boolean)</span>
+    </div>
+    <div>
       <span class="xref">UnityEngine.Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectOfType&lt;T&gt;(System.Boolean)</span>
     </div>
     <div>
       <span class="xref">UnityEngine.Object.FindObjectsOfTypeAll(System.Type)</span>
     </div>
     <div>
       <span class="xref">UnityEngine.Object.FindObjectOfType(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">UnityEngine.Object.FindObjectOfType(System.Type, System.Boolean)</span>
     </div>
     <div>
       <span class="xref">UnityEngine.Object.ToString()</span>
@@ -388,7 +417,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_DocFxProject.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.DocFxProject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L39">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L37">View Source</a>
   </span>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_DocFxProject" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.DocFxProject">DocFxProject</h4>
   <div class="markdown level1 summary"></div>
@@ -417,7 +446,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_Instance.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L61">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L59">View Source</a>
   </span>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_Instance" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.Instance">Instance</h4>
   <div class="markdown level1 summary"></div>
@@ -446,7 +475,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_settingFile.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.settingFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L40">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L38">View Source</a>
   </span>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_settingFile" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.settingFile">settingFile</h4>
   <div class="markdown level1 summary"></div>
@@ -477,7 +506,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_currentSelectPath.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.currentSelectPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L65">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L63">View Source</a>
   </span>
   <a id="MacacaGames_DocGenerator_DocGeneratorWindow_currentSelectPath_" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.currentSelectPath*"></a>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_currentSelectPath" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.currentSelectPath">currentSelectPath</h4>
@@ -507,7 +536,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_isGenerateAvailable.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L134">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L132">View Source</a>
   </span>
   <a id="MacacaGames_DocGenerator_DocGeneratorWindow_isGenerateAvailable_" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable*"></a>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_isGenerateAvailable" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.isGenerateAvailable">isGenerateAvailable</h4>
@@ -539,7 +568,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_Docfx.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.Docfx%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L257">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L255">View Source</a>
   </span>
   <a id="MacacaGames_DocGenerator_DocGeneratorWindow_Docfx_" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.Docfx*"></a>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_Docfx" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.Docfx">Docfx()</h4>
@@ -554,7 +583,7 @@
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_OpenByDocGenerator.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.OpenByDocGenerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L467">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L461">View Source</a>
   </span>
   <a id="MacacaGames_DocGenerator_DocGeneratorWindow_OpenByDocGenerator_" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.OpenByDocGenerator*"></a>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_OpenByDocGenerator" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.OpenByDocGenerator">OpenByDocGenerator()</h4>
@@ -570,7 +599,7 @@ public static void OpenByDocGenerator()</code></pre>
     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow_OpenWindow.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow.OpenWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L79">View Source</a>
+    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L77">View Source</a>
   </span>
   <a id="MacacaGames_DocGenerator_DocGeneratorWindow_OpenWindow_" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.OpenWindow*"></a>
   <h4 id="MacacaGames_DocGenerator_DocGeneratorWindow_OpenWindow" data-uid="MacacaGames.DocGenerator.DocGeneratorWindow.OpenWindow">OpenWindow()</h4>
@@ -592,7 +621,7 @@ public static void OpenWindow()</code></pre>
                     <a href="https://github.com/MacacaGames/UnityDocGenerator/new/master/apiSpec/new?filename=MacacaGames_DocGenerator_DocGeneratorWindow.md&amp;value=---%0Auid%3A%20MacacaGames.DocGenerator.DocGeneratorWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MacacaGames/UnityDocGenerator/blob/master/Editor/DocGeneratorWindow.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

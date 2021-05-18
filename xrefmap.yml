@@ -16,144 +16,67 @@ references:
 - uid: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
   name: allowUnsafeCode
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_allowUnsafeCode
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  fullName: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  nameWithType: AsmdefFile.allowUnsafeCode
-- uid: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode*
-  name: allowUnsafeCode
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_allowUnsafeCode_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
   fullName: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
   nameWithType: AsmdefFile.allowUnsafeCode
 - uid: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
   name: autoReferenced
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_autoReferenced
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  fullName: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  nameWithType: AsmdefFile.autoReferenced
-- uid: MacacaGames.DocGenerator.AsmdefFile.autoReferenced*
-  name: autoReferenced
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_autoReferenced_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
   fullName: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
   nameWithType: AsmdefFile.autoReferenced
 - uid: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
   name: defineConstraints
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_defineConstraints
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  fullName: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  nameWithType: AsmdefFile.defineConstraints
-- uid: MacacaGames.DocGenerator.AsmdefFile.defineConstraints*
-  name: defineConstraints
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_defineConstraints_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
   fullName: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
   nameWithType: AsmdefFile.defineConstraints
 - uid: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
   name: excludePlatforms
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_excludePlatforms
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  fullName: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  nameWithType: AsmdefFile.excludePlatforms
-- uid: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms*
-  name: excludePlatforms
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_excludePlatforms_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
   fullName: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
   nameWithType: AsmdefFile.excludePlatforms
 - uid: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
   name: includePlatforms
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_includePlatforms
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  fullName: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  nameWithType: AsmdefFile.includePlatforms
-- uid: MacacaGames.DocGenerator.AsmdefFile.includePlatforms*
-  name: includePlatforms
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_includePlatforms_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
   fullName: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
   nameWithType: AsmdefFile.includePlatforms
 - uid: MacacaGames.DocGenerator.AsmdefFile.name
   name: name
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_name
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.name
-  fullName: MacacaGames.DocGenerator.AsmdefFile.name
-  nameWithType: AsmdefFile.name
-- uid: MacacaGames.DocGenerator.AsmdefFile.name*
-  name: name
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_name_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.name
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.name
   fullName: MacacaGames.DocGenerator.AsmdefFile.name
   nameWithType: AsmdefFile.name
 - uid: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
   name: noEngineReferences
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_noEngineReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  nameWithType: AsmdefFile.noEngineReferences
-- uid: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences*
-  name: noEngineReferences
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_noEngineReferences_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
   nameWithType: AsmdefFile.noEngineReferences
 - uid: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
   name: overrideReferences
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_overrideReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  nameWithType: AsmdefFile.overrideReferences
-- uid: MacacaGames.DocGenerator.AsmdefFile.overrideReferences*
-  name: overrideReferences
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_overrideReferences_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
   nameWithType: AsmdefFile.overrideReferences
 - uid: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
   name: precompiledReferences
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_precompiledReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  nameWithType: AsmdefFile.precompiledReferences
-- uid: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences*
-  name: precompiledReferences
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_precompiledReferences_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
   nameWithType: AsmdefFile.precompiledReferences
 - uid: MacacaGames.DocGenerator.AsmdefFile.references
   name: references
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_references
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.references
-  fullName: MacacaGames.DocGenerator.AsmdefFile.references
-  nameWithType: AsmdefFile.references
-- uid: MacacaGames.DocGenerator.AsmdefFile.references*
-  name: references
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_references_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.references
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.references
   fullName: MacacaGames.DocGenerator.AsmdefFile.references
   nameWithType: AsmdefFile.references
 - uid: MacacaGames.DocGenerator.AsmdefFile.versionDefines
   name: versionDefines
   href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_versionDefines
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  fullName: MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  nameWithType: AsmdefFile.versionDefines
-- uid: MacacaGames.DocGenerator.AsmdefFile.versionDefines*
-  name: versionDefines
-  href: api/MacacaGames.DocGenerator.AsmdefFile.html#MacacaGames_DocGenerator_AsmdefFile_versionDefines_
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.versionDefines
   fullName: MacacaGames.DocGenerator.AsmdefFile.versionDefines
   nameWithType: AsmdefFile.versionDefines
 - uid: MacacaGames.DocGenerator.Build
@@ -165,170 +88,79 @@ references:
 - uid: MacacaGames.DocGenerator.Build.cleanupCacheHistory
   name: cleanupCacheHistory
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_cleanupCacheHistory
-  commentId: P:MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  fullName: MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  nameWithType: Build.cleanupCacheHistory
-- uid: MacacaGames.DocGenerator.Build.cleanupCacheHistory*
-  name: cleanupCacheHistory
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_cleanupCacheHistory_
-  commentId: Overload:MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.cleanupCacheHistory
   fullName: MacacaGames.DocGenerator.Build.cleanupCacheHistory
   nameWithType: Build.cleanupCacheHistory
 - uid: MacacaGames.DocGenerator.Build.content
   name: content
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_content
-  commentId: P:MacacaGames.DocGenerator.Build.content
-  fullName: MacacaGames.DocGenerator.Build.content
-  nameWithType: Build.content
-- uid: MacacaGames.DocGenerator.Build.content*
-  name: content
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_content_
-  commentId: Overload:MacacaGames.DocGenerator.Build.content
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.content
   fullName: MacacaGames.DocGenerator.Build.content
   nameWithType: Build.content
 - uid: MacacaGames.DocGenerator.Build.dest
   name: dest
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_dest
-  commentId: P:MacacaGames.DocGenerator.Build.dest
-  fullName: MacacaGames.DocGenerator.Build.dest
-  nameWithType: Build.dest
-- uid: MacacaGames.DocGenerator.Build.dest*
-  name: dest
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_dest_
-  commentId: Overload:MacacaGames.DocGenerator.Build.dest
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.dest
   fullName: MacacaGames.DocGenerator.Build.dest
   nameWithType: Build.dest
 - uid: MacacaGames.DocGenerator.Build.disableGitFeatures
   name: disableGitFeatures
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_disableGitFeatures
-  commentId: P:MacacaGames.DocGenerator.Build.disableGitFeatures
-  fullName: MacacaGames.DocGenerator.Build.disableGitFeatures
-  nameWithType: Build.disableGitFeatures
-- uid: MacacaGames.DocGenerator.Build.disableGitFeatures*
-  name: disableGitFeatures
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_disableGitFeatures_
-  commentId: Overload:MacacaGames.DocGenerator.Build.disableGitFeatures
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.disableGitFeatures
   fullName: MacacaGames.DocGenerator.Build.disableGitFeatures
   nameWithType: Build.disableGitFeatures
 - uid: MacacaGames.DocGenerator.Build.fileMetadataFiles
   name: fileMetadataFiles
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_fileMetadataFiles
-  commentId: P:MacacaGames.DocGenerator.Build.fileMetadataFiles
-  fullName: MacacaGames.DocGenerator.Build.fileMetadataFiles
-  nameWithType: Build.fileMetadataFiles
-- uid: MacacaGames.DocGenerator.Build.fileMetadataFiles*
-  name: fileMetadataFiles
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_fileMetadataFiles_
-  commentId: Overload:MacacaGames.DocGenerator.Build.fileMetadataFiles
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.fileMetadataFiles
   fullName: MacacaGames.DocGenerator.Build.fileMetadataFiles
   nameWithType: Build.fileMetadataFiles
 - uid: MacacaGames.DocGenerator.Build.globalMetadataFiles
   name: globalMetadataFiles
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_globalMetadataFiles
-  commentId: P:MacacaGames.DocGenerator.Build.globalMetadataFiles
-  fullName: MacacaGames.DocGenerator.Build.globalMetadataFiles
-  nameWithType: Build.globalMetadataFiles
-- uid: MacacaGames.DocGenerator.Build.globalMetadataFiles*
-  name: globalMetadataFiles
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_globalMetadataFiles_
-  commentId: Overload:MacacaGames.DocGenerator.Build.globalMetadataFiles
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.globalMetadataFiles
   fullName: MacacaGames.DocGenerator.Build.globalMetadataFiles
   nameWithType: Build.globalMetadataFiles
 - uid: MacacaGames.DocGenerator.Build.keepFileLink
   name: keepFileLink
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_keepFileLink
-  commentId: P:MacacaGames.DocGenerator.Build.keepFileLink
-  fullName: MacacaGames.DocGenerator.Build.keepFileLink
-  nameWithType: Build.keepFileLink
-- uid: MacacaGames.DocGenerator.Build.keepFileLink*
-  name: keepFileLink
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_keepFileLink_
-  commentId: Overload:MacacaGames.DocGenerator.Build.keepFileLink
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.keepFileLink
   fullName: MacacaGames.DocGenerator.Build.keepFileLink
   nameWithType: Build.keepFileLink
 - uid: MacacaGames.DocGenerator.Build.markdownEngineName
   name: markdownEngineName
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_markdownEngineName
-  commentId: P:MacacaGames.DocGenerator.Build.markdownEngineName
-  fullName: MacacaGames.DocGenerator.Build.markdownEngineName
-  nameWithType: Build.markdownEngineName
-- uid: MacacaGames.DocGenerator.Build.markdownEngineName*
-  name: markdownEngineName
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_markdownEngineName_
-  commentId: Overload:MacacaGames.DocGenerator.Build.markdownEngineName
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.markdownEngineName
   fullName: MacacaGames.DocGenerator.Build.markdownEngineName
   nameWithType: Build.markdownEngineName
 - uid: MacacaGames.DocGenerator.Build.noLangKeyword
   name: noLangKeyword
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_noLangKeyword
-  commentId: P:MacacaGames.DocGenerator.Build.noLangKeyword
-  fullName: MacacaGames.DocGenerator.Build.noLangKeyword
-  nameWithType: Build.noLangKeyword
-- uid: MacacaGames.DocGenerator.Build.noLangKeyword*
-  name: noLangKeyword
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_noLangKeyword_
-  commentId: Overload:MacacaGames.DocGenerator.Build.noLangKeyword
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.noLangKeyword
   fullName: MacacaGames.DocGenerator.Build.noLangKeyword
   nameWithType: Build.noLangKeyword
 - uid: MacacaGames.DocGenerator.Build.overwrite
   name: overwrite
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_overwrite
-  commentId: P:MacacaGames.DocGenerator.Build.overwrite
-  fullName: MacacaGames.DocGenerator.Build.overwrite
-  nameWithType: Build.overwrite
-- uid: MacacaGames.DocGenerator.Build.overwrite*
-  name: overwrite
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_overwrite_
-  commentId: Overload:MacacaGames.DocGenerator.Build.overwrite
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.overwrite
   fullName: MacacaGames.DocGenerator.Build.overwrite
   nameWithType: Build.overwrite
 - uid: MacacaGames.DocGenerator.Build.postProcessors
   name: postProcessors
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_postProcessors
-  commentId: P:MacacaGames.DocGenerator.Build.postProcessors
-  fullName: MacacaGames.DocGenerator.Build.postProcessors
-  nameWithType: Build.postProcessors
-- uid: MacacaGames.DocGenerator.Build.postProcessors*
-  name: postProcessors
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_postProcessors_
-  commentId: Overload:MacacaGames.DocGenerator.Build.postProcessors
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.postProcessors
   fullName: MacacaGames.DocGenerator.Build.postProcessors
   nameWithType: Build.postProcessors
 - uid: MacacaGames.DocGenerator.Build.resource
   name: resource
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_resource
-  commentId: P:MacacaGames.DocGenerator.Build.resource
-  fullName: MacacaGames.DocGenerator.Build.resource
-  nameWithType: Build.resource
-- uid: MacacaGames.DocGenerator.Build.resource*
-  name: resource
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_resource_
-  commentId: Overload:MacacaGames.DocGenerator.Build.resource
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.resource
   fullName: MacacaGames.DocGenerator.Build.resource
   nameWithType: Build.resource
 - uid: MacacaGames.DocGenerator.Build.template
   name: template
   href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_template
-  commentId: P:MacacaGames.DocGenerator.Build.template
-  fullName: MacacaGames.DocGenerator.Build.template
-  nameWithType: Build.template
-- uid: MacacaGames.DocGenerator.Build.template*
-  name: template
-  href: api/MacacaGames.DocGenerator.Build.html#MacacaGames_DocGenerator_Build_template_
-  commentId: Overload:MacacaGames.DocGenerator.Build.template
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Build.template
   fullName: MacacaGames.DocGenerator.Build.template
   nameWithType: Build.template
 - uid: MacacaGames.DocGenerator.Content
@@ -340,27 +172,13 @@ references:
 - uid: MacacaGames.DocGenerator.Content.files
   name: files
   href: api/MacacaGames.DocGenerator.Content.html#MacacaGames_DocGenerator_Content_files
-  commentId: P:MacacaGames.DocGenerator.Content.files
-  fullName: MacacaGames.DocGenerator.Content.files
-  nameWithType: Content.files
-- uid: MacacaGames.DocGenerator.Content.files*
-  name: files
-  href: api/MacacaGames.DocGenerator.Content.html#MacacaGames_DocGenerator_Content_files_
-  commentId: Overload:MacacaGames.DocGenerator.Content.files
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Content.files
   fullName: MacacaGames.DocGenerator.Content.files
   nameWithType: Content.files
 - uid: MacacaGames.DocGenerator.Content.src
   name: src
   href: api/MacacaGames.DocGenerator.Content.html#MacacaGames_DocGenerator_Content_src
-  commentId: P:MacacaGames.DocGenerator.Content.src
-  fullName: MacacaGames.DocGenerator.Content.src
-  nameWithType: Content.src
-- uid: MacacaGames.DocGenerator.Content.src*
-  name: src
-  href: api/MacacaGames.DocGenerator.Content.html#MacacaGames_DocGenerator_Content_src_
-  commentId: Overload:MacacaGames.DocGenerator.Content.src
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Content.src
   fullName: MacacaGames.DocGenerator.Content.src
   nameWithType: Content.src
 - uid: MacacaGames.DocGenerator.DocFxSetting
@@ -372,27 +190,13 @@ references:
 - uid: MacacaGames.DocGenerator.DocFxSetting.build
   name: build
   href: api/MacacaGames.DocGenerator.DocFxSetting.html#MacacaGames_DocGenerator_DocFxSetting_build
-  commentId: P:MacacaGames.DocGenerator.DocFxSetting.build
-  fullName: MacacaGames.DocGenerator.DocFxSetting.build
-  nameWithType: DocFxSetting.build
-- uid: MacacaGames.DocGenerator.DocFxSetting.build*
-  name: build
-  href: api/MacacaGames.DocGenerator.DocFxSetting.html#MacacaGames_DocGenerator_DocFxSetting_build_
-  commentId: Overload:MacacaGames.DocGenerator.DocFxSetting.build
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.DocFxSetting.build
   fullName: MacacaGames.DocGenerator.DocFxSetting.build
   nameWithType: DocFxSetting.build
 - uid: MacacaGames.DocGenerator.DocFxSetting.metadata
   name: metadata
   href: api/MacacaGames.DocGenerator.DocFxSetting.html#MacacaGames_DocGenerator_DocFxSetting_metadata
-  commentId: P:MacacaGames.DocGenerator.DocFxSetting.metadata
-  fullName: MacacaGames.DocGenerator.DocFxSetting.metadata
-  nameWithType: DocFxSetting.metadata
-- uid: MacacaGames.DocGenerator.DocFxSetting.metadata*
-  name: metadata
-  href: api/MacacaGames.DocGenerator.DocFxSetting.html#MacacaGames_DocGenerator_DocFxSetting_metadata_
-  commentId: Overload:MacacaGames.DocGenerator.DocFxSetting.metadata
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.DocFxSetting.metadata
   fullName: MacacaGames.DocGenerator.DocFxSetting.metadata
   nameWithType: DocFxSetting.metadata
 - uid: MacacaGames.DocGenerator.DocGeneratorPackageMangerExtension
@@ -551,66 +355,31 @@ references:
 - uid: MacacaGames.DocGenerator.Metadata.dest
   name: dest
   href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_dest
-  commentId: P:MacacaGames.DocGenerator.Metadata.dest
-  fullName: MacacaGames.DocGenerator.Metadata.dest
-  nameWithType: Metadata.dest
-- uid: MacacaGames.DocGenerator.Metadata.dest*
-  name: dest
-  href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_dest_
-  commentId: Overload:MacacaGames.DocGenerator.Metadata.dest
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Metadata.dest
   fullName: MacacaGames.DocGenerator.Metadata.dest
   nameWithType: Metadata.dest
 - uid: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
   name: disableDefaultFilter
   href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_disableDefaultFilter
-  commentId: P:MacacaGames.DocGenerator.Metadata.disableDefaultFilter
-  fullName: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
-  nameWithType: Metadata.disableDefaultFilter
-- uid: MacacaGames.DocGenerator.Metadata.disableDefaultFilter*
-  name: disableDefaultFilter
-  href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_disableDefaultFilter_
-  commentId: Overload:MacacaGames.DocGenerator.Metadata.disableDefaultFilter
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Metadata.disableDefaultFilter
   fullName: MacacaGames.DocGenerator.Metadata.disableDefaultFilter
   nameWithType: Metadata.disableDefaultFilter
 - uid: MacacaGames.DocGenerator.Metadata.disableGitFeatures
   name: disableGitFeatures
   href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_disableGitFeatures
-  commentId: P:MacacaGames.DocGenerator.Metadata.disableGitFeatures
-  fullName: MacacaGames.DocGenerator.Metadata.disableGitFeatures
-  nameWithType: Metadata.disableGitFeatures
-- uid: MacacaGames.DocGenerator.Metadata.disableGitFeatures*
-  name: disableGitFeatures
-  href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_disableGitFeatures_
-  commentId: Overload:MacacaGames.DocGenerator.Metadata.disableGitFeatures
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Metadata.disableGitFeatures
   fullName: MacacaGames.DocGenerator.Metadata.disableGitFeatures
   nameWithType: Metadata.disableGitFeatures
 - uid: MacacaGames.DocGenerator.Metadata.filter
   name: filter
   href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_filter
-  commentId: P:MacacaGames.DocGenerator.Metadata.filter
-  fullName: MacacaGames.DocGenerator.Metadata.filter
-  nameWithType: Metadata.filter
-- uid: MacacaGames.DocGenerator.Metadata.filter*
-  name: filter
-  href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_filter_
-  commentId: Overload:MacacaGames.DocGenerator.Metadata.filter
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Metadata.filter
   fullName: MacacaGames.DocGenerator.Metadata.filter
   nameWithType: Metadata.filter
 - uid: MacacaGames.DocGenerator.Metadata.src
   name: src
   href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_src
-  commentId: P:MacacaGames.DocGenerator.Metadata.src
-  fullName: MacacaGames.DocGenerator.Metadata.src
-  nameWithType: Metadata.src
-- uid: MacacaGames.DocGenerator.Metadata.src*
-  name: src
-  href: api/MacacaGames.DocGenerator.Metadata.html#MacacaGames_DocGenerator_Metadata_src_
-  commentId: Overload:MacacaGames.DocGenerator.Metadata.src
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Metadata.src
   fullName: MacacaGames.DocGenerator.Metadata.src
   nameWithType: Metadata.src
 - uid: MacacaGames.DocGenerator.Overwrite
@@ -622,27 +391,13 @@ references:
 - uid: MacacaGames.DocGenerator.Overwrite.exclude
   name: exclude
   href: api/MacacaGames.DocGenerator.Overwrite.html#MacacaGames_DocGenerator_Overwrite_exclude
-  commentId: P:MacacaGames.DocGenerator.Overwrite.exclude
-  fullName: MacacaGames.DocGenerator.Overwrite.exclude
-  nameWithType: Overwrite.exclude
-- uid: MacacaGames.DocGenerator.Overwrite.exclude*
-  name: exclude
-  href: api/MacacaGames.DocGenerator.Overwrite.html#MacacaGames_DocGenerator_Overwrite_exclude_
-  commentId: Overload:MacacaGames.DocGenerator.Overwrite.exclude
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Overwrite.exclude
   fullName: MacacaGames.DocGenerator.Overwrite.exclude
   nameWithType: Overwrite.exclude
 - uid: MacacaGames.DocGenerator.Overwrite.files
   name: files
   href: api/MacacaGames.DocGenerator.Overwrite.html#MacacaGames_DocGenerator_Overwrite_files
-  commentId: P:MacacaGames.DocGenerator.Overwrite.files
-  fullName: MacacaGames.DocGenerator.Overwrite.files
-  nameWithType: Overwrite.files
-- uid: MacacaGames.DocGenerator.Overwrite.files*
-  name: files
-  href: api/MacacaGames.DocGenerator.Overwrite.html#MacacaGames_DocGenerator_Overwrite_files_
-  commentId: Overload:MacacaGames.DocGenerator.Overwrite.files
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Overwrite.files
   fullName: MacacaGames.DocGenerator.Overwrite.files
   nameWithType: Overwrite.files
 - uid: MacacaGames.DocGenerator.Resource
@@ -654,27 +409,13 @@ references:
 - uid: MacacaGames.DocGenerator.Resource.files
   name: files
   href: api/MacacaGames.DocGenerator.Resource.html#MacacaGames_DocGenerator_Resource_files
-  commentId: P:MacacaGames.DocGenerator.Resource.files
-  fullName: MacacaGames.DocGenerator.Resource.files
-  nameWithType: Resource.files
-- uid: MacacaGames.DocGenerator.Resource.files*
-  name: files
-  href: api/MacacaGames.DocGenerator.Resource.html#MacacaGames_DocGenerator_Resource_files_
-  commentId: Overload:MacacaGames.DocGenerator.Resource.files
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Resource.files
   fullName: MacacaGames.DocGenerator.Resource.files
   nameWithType: Resource.files
 - uid: MacacaGames.DocGenerator.Resource.src
   name: src
   href: api/MacacaGames.DocGenerator.Resource.html#MacacaGames_DocGenerator_Resource_src
-  commentId: P:MacacaGames.DocGenerator.Resource.src
-  fullName: MacacaGames.DocGenerator.Resource.src
-  nameWithType: Resource.src
-- uid: MacacaGames.DocGenerator.Resource.src*
-  name: src
-  href: api/MacacaGames.DocGenerator.Resource.html#MacacaGames_DocGenerator_Resource_src_
-  commentId: Overload:MacacaGames.DocGenerator.Resource.src
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Resource.src
   fullName: MacacaGames.DocGenerator.Resource.src
   nameWithType: Resource.src
 - uid: MacacaGames.DocGenerator.Src
@@ -686,27 +427,13 @@ references:
 - uid: MacacaGames.DocGenerator.Src.files
   name: files
   href: api/MacacaGames.DocGenerator.Src.html#MacacaGames_DocGenerator_Src_files
-  commentId: P:MacacaGames.DocGenerator.Src.files
-  fullName: MacacaGames.DocGenerator.Src.files
-  nameWithType: Src.files
-- uid: MacacaGames.DocGenerator.Src.files*
-  name: files
-  href: api/MacacaGames.DocGenerator.Src.html#MacacaGames_DocGenerator_Src_files_
-  commentId: Overload:MacacaGames.DocGenerator.Src.files
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Src.files
   fullName: MacacaGames.DocGenerator.Src.files
   nameWithType: Src.files
 - uid: MacacaGames.DocGenerator.Src.src
   name: src
   href: api/MacacaGames.DocGenerator.Src.html#MacacaGames_DocGenerator_Src_src
-  commentId: P:MacacaGames.DocGenerator.Src.src
-  fullName: MacacaGames.DocGenerator.Src.src
-  nameWithType: Src.src
-- uid: MacacaGames.DocGenerator.Src.src*
-  name: src
-  href: api/MacacaGames.DocGenerator.Src.html#MacacaGames_DocGenerator_Src_src_
-  commentId: Overload:MacacaGames.DocGenerator.Src.src
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.Src.src
   fullName: MacacaGames.DocGenerator.Src.src
   nameWithType: Src.src
 - uid: MacacaGames.DocGenerator.VersionDefine
@@ -718,39 +445,18 @@ references:
 - uid: MacacaGames.DocGenerator.VersionDefine.define
   name: define
   href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_define
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.define
-  fullName: MacacaGames.DocGenerator.VersionDefine.define
-  nameWithType: VersionDefine.define
-- uid: MacacaGames.DocGenerator.VersionDefine.define*
-  name: define
-  href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_define_
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.define
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.define
   fullName: MacacaGames.DocGenerator.VersionDefine.define
   nameWithType: VersionDefine.define
 - uid: MacacaGames.DocGenerator.VersionDefine.expression
   name: expression
   href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_expression
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.expression
-  fullName: MacacaGames.DocGenerator.VersionDefine.expression
-  nameWithType: VersionDefine.expression
-- uid: MacacaGames.DocGenerator.VersionDefine.expression*
-  name: expression
-  href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_expression_
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.expression
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.expression
   fullName: MacacaGames.DocGenerator.VersionDefine.expression
   nameWithType: VersionDefine.expression
 - uid: MacacaGames.DocGenerator.VersionDefine.name
   name: name
   href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_name
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.name
-  fullName: MacacaGames.DocGenerator.VersionDefine.name
-  nameWithType: VersionDefine.name
-- uid: MacacaGames.DocGenerator.VersionDefine.name*
-  name: name
-  href: api/MacacaGames.DocGenerator.VersionDefine.html#MacacaGames_DocGenerator_VersionDefine_name_
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.name
-  isSpec: "True"
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.name
   fullName: MacacaGames.DocGenerator.VersionDefine.name
   nameWithType: VersionDefine.name
