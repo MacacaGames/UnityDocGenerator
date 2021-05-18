@@ -30,7 +30,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: AsmdefFile
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -66,7 +66,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.AsmdefFile.name
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.name
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.name
   id: name
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -75,7 +75,7 @@ items:
   name: name
   nameWithType: AsmdefFile.name
   fullName: MacacaGames.DocGenerator.AsmdefFile.name
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -83,25 +83,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: name
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string name { get; set; }
-    parameters: []
+    content: public string name
     return:
       type: System.String
-    content.vb: Public Property name As String
-  overload: MacacaGames.DocGenerator.AsmdefFile.name*
+    content.vb: Public name As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.references
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.references
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.references
   id: references
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -110,7 +106,7 @@ items:
   name: references
   nameWithType: AsmdefFile.references
   fullName: MacacaGames.DocGenerator.AsmdefFile.references
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -118,25 +114,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: references
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> references { get; set; }
-    parameters: []
+    content: public List<string> references
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property references As List(Of String)
-  overload: MacacaGames.DocGenerator.AsmdefFile.references*
+    content.vb: Public references As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
   id: includePlatforms
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -145,7 +137,7 @@ items:
   name: includePlatforms
   nameWithType: AsmdefFile.includePlatforms
   fullName: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -153,25 +145,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: includePlatforms
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> includePlatforms { get; set; }
-    parameters: []
+    content: public List<string> includePlatforms
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property includePlatforms As List(Of String)
-  overload: MacacaGames.DocGenerator.AsmdefFile.includePlatforms*
+    content.vb: Public includePlatforms As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
   id: excludePlatforms
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -180,7 +168,7 @@ items:
   name: excludePlatforms
   nameWithType: AsmdefFile.excludePlatforms
   fullName: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -188,25 +176,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: excludePlatforms
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> excludePlatforms { get; set; }
-    parameters: []
+    content: public List<string> excludePlatforms
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property excludePlatforms As List(Of String)
-  overload: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms*
+    content.vb: Public excludePlatforms As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
   id: allowUnsafeCode
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -215,7 +199,7 @@ items:
   name: allowUnsafeCode
   nameWithType: AsmdefFile.allowUnsafeCode
   fullName: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -223,25 +207,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: allowUnsafeCode
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool allowUnsafeCode { get; set; }
-    parameters: []
+    content: public bool allowUnsafeCode
     return:
       type: System.Boolean
-    content.vb: Public Property allowUnsafeCode As Boolean
-  overload: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode*
+    content.vb: Public allowUnsafeCode As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
   id: overrideReferences
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -250,7 +230,7 @@ items:
   name: overrideReferences
   nameWithType: AsmdefFile.overrideReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -258,25 +238,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: overrideReferences
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool overrideReferences { get; set; }
-    parameters: []
+    content: public bool overrideReferences
     return:
       type: System.Boolean
-    content.vb: Public Property overrideReferences As Boolean
-  overload: MacacaGames.DocGenerator.AsmdefFile.overrideReferences*
+    content.vb: Public overrideReferences As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
   id: precompiledReferences
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -285,7 +261,7 @@ items:
   name: precompiledReferences
   nameWithType: AsmdefFile.precompiledReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -293,25 +269,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: precompiledReferences
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> precompiledReferences { get; set; }
-    parameters: []
+    content: public List<string> precompiledReferences
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property precompiledReferences As List(Of String)
-  overload: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences*
+    content.vb: Public precompiledReferences As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
   id: autoReferenced
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -320,7 +292,7 @@ items:
   name: autoReferenced
   nameWithType: AsmdefFile.autoReferenced
   fullName: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -328,25 +300,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: autoReferenced
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool autoReferenced { get; set; }
-    parameters: []
+    content: public bool autoReferenced
     return:
       type: System.Boolean
-    content.vb: Public Property autoReferenced As Boolean
-  overload: MacacaGames.DocGenerator.AsmdefFile.autoReferenced*
+    content.vb: Public autoReferenced As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
   id: defineConstraints
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -355,7 +323,7 @@ items:
   name: defineConstraints
   nameWithType: AsmdefFile.defineConstraints
   fullName: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -363,25 +331,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: defineConstraints
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 26
+    startLine: 28
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> defineConstraints { get; set; }
-    parameters: []
+    content: public List<string> defineConstraints
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property defineConstraints As List(Of String)
-  overload: MacacaGames.DocGenerator.AsmdefFile.defineConstraints*
+    content.vb: Public defineConstraints As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.versionDefines
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.versionDefines
   id: versionDefines
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -390,7 +354,7 @@ items:
   name: versionDefines
   nameWithType: AsmdefFile.versionDefines
   fullName: MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -398,25 +362,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: versionDefines
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<VersionDefine> versionDefines { get; set; }
-    parameters: []
+    content: public List<VersionDefine> versionDefines
     return:
       type: System.Collections.Generic.List{MacacaGames.DocGenerator.VersionDefine}
-    content.vb: Public Property versionDefines As List(Of VersionDefine)
-  overload: MacacaGames.DocGenerator.AsmdefFile.versionDefines*
+    content.vb: Public versionDefines As List(Of VersionDefine)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  commentId: P:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
+  commentId: F:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
   id: noEngineReferences
   parent: MacacaGames.DocGenerator.AsmdefFile
   langs:
@@ -425,7 +385,7 @@ items:
   name: noEngineReferences
   nameWithType: AsmdefFile.noEngineReferences
   fullName: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -433,21 +393,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: noEngineReferences
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool noEngineReferences { get; set; }
-    parameters: []
+    content: public bool noEngineReferences
     return:
       type: System.Boolean
-    content.vb: Public Property noEngineReferences As Boolean
-  overload: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences*
+    content.vb: Public noEngineReferences As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -748,11 +704,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.AsmdefFile.name*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.name
-  name: name
-  nameWithType: AsmdefFile.name
-  fullName: MacacaGames.DocGenerator.AsmdefFile.name
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -760,11 +711,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: MacacaGames.DocGenerator.AsmdefFile.references*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.references
-  name: references
-  nameWithType: AsmdefFile.references
-  fullName: MacacaGames.DocGenerator.AsmdefFile.references
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -854,21 +800,6 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: MacacaGames.DocGenerator.AsmdefFile.includePlatforms*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-  name: includePlatforms
-  nameWithType: AsmdefFile.includePlatforms
-  fullName: MacacaGames.DocGenerator.AsmdefFile.includePlatforms
-- uid: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-  name: excludePlatforms
-  nameWithType: AsmdefFile.excludePlatforms
-  fullName: MacacaGames.DocGenerator.AsmdefFile.excludePlatforms
-- uid: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
-  name: allowUnsafeCode
-  nameWithType: AsmdefFile.allowUnsafeCode
-  fullName: MacacaGames.DocGenerator.AsmdefFile.allowUnsafeCode
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -876,31 +807,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: MacacaGames.DocGenerator.AsmdefFile.overrideReferences*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-  name: overrideReferences
-  nameWithType: AsmdefFile.overrideReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.overrideReferences
-- uid: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-  name: precompiledReferences
-  nameWithType: AsmdefFile.precompiledReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.precompiledReferences
-- uid: MacacaGames.DocGenerator.AsmdefFile.autoReferenced*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-  name: autoReferenced
-  nameWithType: AsmdefFile.autoReferenced
-  fullName: MacacaGames.DocGenerator.AsmdefFile.autoReferenced
-- uid: MacacaGames.DocGenerator.AsmdefFile.defineConstraints*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-  name: defineConstraints
-  nameWithType: AsmdefFile.defineConstraints
-  fullName: MacacaGames.DocGenerator.AsmdefFile.defineConstraints
-- uid: MacacaGames.DocGenerator.AsmdefFile.versionDefines*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.versionDefines
-  name: versionDefines
-  nameWithType: AsmdefFile.versionDefines
-  fullName: MacacaGames.DocGenerator.AsmdefFile.versionDefines
 - uid: System.Collections.Generic.List{MacacaGames.DocGenerator.VersionDefine}
   commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.VersionDefine}
   parent: System.Collections.Generic
@@ -943,8 +849,3 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences*
-  commentId: Overload:MacacaGames.DocGenerator.AsmdefFile.noEngineReferences
-  name: noEngineReferences
-  nameWithType: AsmdefFile.noEngineReferences
-  fullName: MacacaGames.DocGenerator.AsmdefFile.noEngineReferences

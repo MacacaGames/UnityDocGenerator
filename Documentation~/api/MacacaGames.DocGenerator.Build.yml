@@ -32,7 +32,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Build
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 78
+    startLine: 80
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -66,7 +66,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.Build.content
-  commentId: P:MacacaGames.DocGenerator.Build.content
+  commentId: F:MacacaGames.DocGenerator.Build.content
   id: content
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -75,7 +75,7 @@ items:
   name: content
   nameWithType: Build.content
   fullName: MacacaGames.DocGenerator.Build.content
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -83,25 +83,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: content
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 81
+    startLine: 83
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<Content> content { get; set; }
-    parameters: []
+    content: public List<Content> content
     return:
       type: System.Collections.Generic.List{MacacaGames.DocGenerator.Content}
-    content.vb: Public Property content As List(Of Content)
-  overload: MacacaGames.DocGenerator.Build.content*
+    content.vb: Public content As List(Of Content)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.resource
-  commentId: P:MacacaGames.DocGenerator.Build.resource
+  commentId: F:MacacaGames.DocGenerator.Build.resource
   id: resource
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -110,7 +106,7 @@ items:
   name: resource
   nameWithType: Build.resource
   fullName: MacacaGames.DocGenerator.Build.resource
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -118,25 +114,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: resource
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 82
+    startLine: 84
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<Resource> resource { get; set; }
-    parameters: []
+    content: public List<Resource> resource
     return:
       type: System.Collections.Generic.List{MacacaGames.DocGenerator.Resource}
-    content.vb: Public Property resource As List(Of Resource)
-  overload: MacacaGames.DocGenerator.Build.resource*
+    content.vb: Public resource As List(Of Resource)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.overwrite
-  commentId: P:MacacaGames.DocGenerator.Build.overwrite
+  commentId: F:MacacaGames.DocGenerator.Build.overwrite
   id: overwrite
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -145,7 +137,7 @@ items:
   name: overwrite
   nameWithType: Build.overwrite
   fullName: MacacaGames.DocGenerator.Build.overwrite
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -153,25 +145,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: overwrite
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 83
+    startLine: 85
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<Overwrite> overwrite { get; set; }
-    parameters: []
+    content: public List<Overwrite> overwrite
     return:
       type: System.Collections.Generic.List{MacacaGames.DocGenerator.Overwrite}
-    content.vb: Public Property overwrite As List(Of Overwrite)
-  overload: MacacaGames.DocGenerator.Build.overwrite*
+    content.vb: Public overwrite As List(Of Overwrite)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.dest
-  commentId: P:MacacaGames.DocGenerator.Build.dest
+  commentId: F:MacacaGames.DocGenerator.Build.dest
   id: dest
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -180,7 +168,7 @@ items:
   name: dest
   nameWithType: Build.dest
   fullName: MacacaGames.DocGenerator.Build.dest
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -188,25 +176,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: dest
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 84
+    startLine: 86
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string dest { get; set; }
-    parameters: []
+    content: public string dest
     return:
       type: System.String
-    content.vb: Public Property dest As String
-  overload: MacacaGames.DocGenerator.Build.dest*
+    content.vb: Public dest As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.globalMetadataFiles
-  commentId: P:MacacaGames.DocGenerator.Build.globalMetadataFiles
+  commentId: F:MacacaGames.DocGenerator.Build.globalMetadataFiles
   id: globalMetadataFiles
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -215,7 +199,7 @@ items:
   name: globalMetadataFiles
   nameWithType: Build.globalMetadataFiles
   fullName: MacacaGames.DocGenerator.Build.globalMetadataFiles
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -223,25 +207,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: globalMetadataFiles
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 85
+    startLine: 87
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<object> globalMetadataFiles { get; set; }
-    parameters: []
+    content: public List<object> globalMetadataFiles
     return:
       type: System.Collections.Generic.List{System.Object}
-    content.vb: Public Property globalMetadataFiles As List(Of Object)
-  overload: MacacaGames.DocGenerator.Build.globalMetadataFiles*
+    content.vb: Public globalMetadataFiles As List(Of Object)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.fileMetadataFiles
-  commentId: P:MacacaGames.DocGenerator.Build.fileMetadataFiles
+  commentId: F:MacacaGames.DocGenerator.Build.fileMetadataFiles
   id: fileMetadataFiles
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -250,7 +230,7 @@ items:
   name: fileMetadataFiles
   nameWithType: Build.fileMetadataFiles
   fullName: MacacaGames.DocGenerator.Build.fileMetadataFiles
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -258,25 +238,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: fileMetadataFiles
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 86
+    startLine: 88
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<object> fileMetadataFiles { get; set; }
-    parameters: []
+    content: public List<object> fileMetadataFiles
     return:
       type: System.Collections.Generic.List{System.Object}
-    content.vb: Public Property fileMetadataFiles As List(Of Object)
-  overload: MacacaGames.DocGenerator.Build.fileMetadataFiles*
+    content.vb: Public fileMetadataFiles As List(Of Object)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.template
-  commentId: P:MacacaGames.DocGenerator.Build.template
+  commentId: F:MacacaGames.DocGenerator.Build.template
   id: template
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -285,7 +261,7 @@ items:
   name: template
   nameWithType: Build.template
   fullName: MacacaGames.DocGenerator.Build.template
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -293,25 +269,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: template
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 87
+    startLine: 89
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> template { get; set; }
-    parameters: []
+    content: public List<string> template
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property template As List(Of String)
-  overload: MacacaGames.DocGenerator.Build.template*
+    content.vb: Public template As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.postProcessors
-  commentId: P:MacacaGames.DocGenerator.Build.postProcessors
+  commentId: F:MacacaGames.DocGenerator.Build.postProcessors
   id: postProcessors
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -320,7 +292,7 @@ items:
   name: postProcessors
   nameWithType: Build.postProcessors
   fullName: MacacaGames.DocGenerator.Build.postProcessors
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -328,25 +300,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: postProcessors
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 88
+    startLine: 90
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<object> postProcessors { get; set; }
-    parameters: []
+    content: public List<object> postProcessors
     return:
       type: System.Collections.Generic.List{System.Object}
-    content.vb: Public Property postProcessors As List(Of Object)
-  overload: MacacaGames.DocGenerator.Build.postProcessors*
+    content.vb: Public postProcessors As List(Of Object)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.markdownEngineName
-  commentId: P:MacacaGames.DocGenerator.Build.markdownEngineName
+  commentId: F:MacacaGames.DocGenerator.Build.markdownEngineName
   id: markdownEngineName
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -355,7 +323,7 @@ items:
   name: markdownEngineName
   nameWithType: Build.markdownEngineName
   fullName: MacacaGames.DocGenerator.Build.markdownEngineName
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -363,25 +331,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: markdownEngineName
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 89
+    startLine: 91
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string markdownEngineName { get; set; }
-    parameters: []
+    content: public string markdownEngineName
     return:
       type: System.String
-    content.vb: Public Property markdownEngineName As String
-  overload: MacacaGames.DocGenerator.Build.markdownEngineName*
+    content.vb: Public markdownEngineName As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.noLangKeyword
-  commentId: P:MacacaGames.DocGenerator.Build.noLangKeyword
+  commentId: F:MacacaGames.DocGenerator.Build.noLangKeyword
   id: noLangKeyword
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -390,7 +354,7 @@ items:
   name: noLangKeyword
   nameWithType: Build.noLangKeyword
   fullName: MacacaGames.DocGenerator.Build.noLangKeyword
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -398,25 +362,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: noLangKeyword
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 90
+    startLine: 92
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool noLangKeyword { get; set; }
-    parameters: []
+    content: public bool noLangKeyword
     return:
       type: System.Boolean
-    content.vb: Public Property noLangKeyword As Boolean
-  overload: MacacaGames.DocGenerator.Build.noLangKeyword*
+    content.vb: Public noLangKeyword As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.keepFileLink
-  commentId: P:MacacaGames.DocGenerator.Build.keepFileLink
+  commentId: F:MacacaGames.DocGenerator.Build.keepFileLink
   id: keepFileLink
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -425,7 +385,7 @@ items:
   name: keepFileLink
   nameWithType: Build.keepFileLink
   fullName: MacacaGames.DocGenerator.Build.keepFileLink
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -433,25 +393,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: keepFileLink
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 91
+    startLine: 93
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool keepFileLink { get; set; }
-    parameters: []
+    content: public bool keepFileLink
     return:
       type: System.Boolean
-    content.vb: Public Property keepFileLink As Boolean
-  overload: MacacaGames.DocGenerator.Build.keepFileLink*
+    content.vb: Public keepFileLink As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  commentId: P:MacacaGames.DocGenerator.Build.cleanupCacheHistory
+  commentId: F:MacacaGames.DocGenerator.Build.cleanupCacheHistory
   id: cleanupCacheHistory
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -460,7 +416,7 @@ items:
   name: cleanupCacheHistory
   nameWithType: Build.cleanupCacheHistory
   fullName: MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -468,25 +424,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: cleanupCacheHistory
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 92
+    startLine: 94
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool cleanupCacheHistory { get; set; }
-    parameters: []
+    content: public bool cleanupCacheHistory
     return:
       type: System.Boolean
-    content.vb: Public Property cleanupCacheHistory As Boolean
-  overload: MacacaGames.DocGenerator.Build.cleanupCacheHistory*
+    content.vb: Public cleanupCacheHistory As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Build.disableGitFeatures
-  commentId: P:MacacaGames.DocGenerator.Build.disableGitFeatures
+  commentId: F:MacacaGames.DocGenerator.Build.disableGitFeatures
   id: disableGitFeatures
   parent: MacacaGames.DocGenerator.Build
   langs:
@@ -495,7 +447,7 @@ items:
   name: disableGitFeatures
   nameWithType: Build.disableGitFeatures
   fullName: MacacaGames.DocGenerator.Build.disableGitFeatures
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -503,21 +455,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: disableGitFeatures
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 93
+    startLine: 95
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public bool disableGitFeatures { get; set; }
-    parameters: []
+    content: public bool disableGitFeatures
     return:
       type: System.Boolean
-    content.vb: Public Property disableGitFeatures As Boolean
-  overload: MacacaGames.DocGenerator.Build.disableGitFeatures*
+    content.vb: Public disableGitFeatures As Boolean
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -818,11 +766,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.Build.content*
-  commentId: Overload:MacacaGames.DocGenerator.Build.content
-  name: content
-  nameWithType: Build.content
-  fullName: MacacaGames.DocGenerator.Build.content
 - uid: System.Collections.Generic.List{MacacaGames.DocGenerator.Content}
   commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.Content}
   parent: System.Collections.Generic
@@ -910,11 +853,6 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: MacacaGames.DocGenerator.Build.resource*
-  commentId: Overload:MacacaGames.DocGenerator.Build.resource
-  name: resource
-  nameWithType: Build.resource
-  fullName: MacacaGames.DocGenerator.Build.resource
 - uid: System.Collections.Generic.List{MacacaGames.DocGenerator.Resource}
   commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.Resource}
   parent: System.Collections.Generic
@@ -957,11 +895,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.DocGenerator.Build.overwrite*
-  commentId: Overload:MacacaGames.DocGenerator.Build.overwrite
-  name: overwrite
-  nameWithType: Build.overwrite
-  fullName: MacacaGames.DocGenerator.Build.overwrite
 - uid: System.Collections.Generic.List{MacacaGames.DocGenerator.Overwrite}
   commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.Overwrite}
   parent: System.Collections.Generic
@@ -1004,11 +937,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.DocGenerator.Build.dest*
-  commentId: Overload:MacacaGames.DocGenerator.Build.dest
-  name: dest
-  nameWithType: Build.dest
-  fullName: MacacaGames.DocGenerator.Build.dest
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1016,11 +944,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: MacacaGames.DocGenerator.Build.globalMetadataFiles*
-  commentId: Overload:MacacaGames.DocGenerator.Build.globalMetadataFiles
-  name: globalMetadataFiles
-  nameWithType: Build.globalMetadataFiles
-  fullName: MacacaGames.DocGenerator.Build.globalMetadataFiles
 - uid: System.Collections.Generic.List{System.Object}
   commentId: T:System.Collections.Generic.List{System.Object}
   parent: System.Collections.Generic
@@ -1065,16 +988,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.DocGenerator.Build.fileMetadataFiles*
-  commentId: Overload:MacacaGames.DocGenerator.Build.fileMetadataFiles
-  name: fileMetadataFiles
-  nameWithType: Build.fileMetadataFiles
-  fullName: MacacaGames.DocGenerator.Build.fileMetadataFiles
-- uid: MacacaGames.DocGenerator.Build.template*
-  commentId: Overload:MacacaGames.DocGenerator.Build.template
-  name: template
-  nameWithType: Build.template
-  fullName: MacacaGames.DocGenerator.Build.template
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -1119,21 +1032,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: MacacaGames.DocGenerator.Build.postProcessors*
-  commentId: Overload:MacacaGames.DocGenerator.Build.postProcessors
-  name: postProcessors
-  nameWithType: Build.postProcessors
-  fullName: MacacaGames.DocGenerator.Build.postProcessors
-- uid: MacacaGames.DocGenerator.Build.markdownEngineName*
-  commentId: Overload:MacacaGames.DocGenerator.Build.markdownEngineName
-  name: markdownEngineName
-  nameWithType: Build.markdownEngineName
-  fullName: MacacaGames.DocGenerator.Build.markdownEngineName
-- uid: MacacaGames.DocGenerator.Build.noLangKeyword*
-  commentId: Overload:MacacaGames.DocGenerator.Build.noLangKeyword
-  name: noLangKeyword
-  nameWithType: Build.noLangKeyword
-  fullName: MacacaGames.DocGenerator.Build.noLangKeyword
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1141,18 +1039,3 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: MacacaGames.DocGenerator.Build.keepFileLink*
-  commentId: Overload:MacacaGames.DocGenerator.Build.keepFileLink
-  name: keepFileLink
-  nameWithType: Build.keepFileLink
-  fullName: MacacaGames.DocGenerator.Build.keepFileLink
-- uid: MacacaGames.DocGenerator.Build.cleanupCacheHistory*
-  commentId: Overload:MacacaGames.DocGenerator.Build.cleanupCacheHistory
-  name: cleanupCacheHistory
-  nameWithType: Build.cleanupCacheHistory
-  fullName: MacacaGames.DocGenerator.Build.cleanupCacheHistory
-- uid: MacacaGames.DocGenerator.Build.disableGitFeatures*
-  commentId: Overload:MacacaGames.DocGenerator.Build.disableGitFeatures
-  name: disableGitFeatures
-  nameWithType: Build.disableGitFeatures
-  fullName: MacacaGames.DocGenerator.Build.disableGitFeatures

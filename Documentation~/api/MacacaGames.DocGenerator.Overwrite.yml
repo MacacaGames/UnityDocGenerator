@@ -21,7 +21,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Overwrite
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 71
+    startLine: 73
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -55,7 +55,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.Overwrite.files
-  commentId: P:MacacaGames.DocGenerator.Overwrite.files
+  commentId: F:MacacaGames.DocGenerator.Overwrite.files
   id: files
   parent: MacacaGames.DocGenerator.Overwrite
   langs:
@@ -64,7 +64,7 @@ items:
   name: files
   nameWithType: Overwrite.files
   fullName: MacacaGames.DocGenerator.Overwrite.files
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -72,25 +72,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: files
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 74
+    startLine: 76
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> files { get; set; }
-    parameters: []
+    content: public List<string> files
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property files As List(Of String)
-  overload: MacacaGames.DocGenerator.Overwrite.files*
+    content.vb: Public files As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Overwrite.exclude
-  commentId: P:MacacaGames.DocGenerator.Overwrite.exclude
+  commentId: F:MacacaGames.DocGenerator.Overwrite.exclude
   id: exclude
   parent: MacacaGames.DocGenerator.Overwrite
   langs:
@@ -99,7 +95,7 @@ items:
   name: exclude
   nameWithType: Overwrite.exclude
   fullName: MacacaGames.DocGenerator.Overwrite.exclude
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -107,21 +103,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: exclude
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 75
+    startLine: 77
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> exclude { get; set; }
-    parameters: []
+    content: public List<string> exclude
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property exclude As List(Of String)
-  overload: MacacaGames.DocGenerator.Overwrite.exclude*
+    content.vb: Public exclude As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -422,11 +414,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.Overwrite.files*
-  commentId: Overload:MacacaGames.DocGenerator.Overwrite.files
-  name: files
-  nameWithType: Overwrite.files
-  fullName: MacacaGames.DocGenerator.Overwrite.files
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -516,8 +503,3 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: MacacaGames.DocGenerator.Overwrite.exclude*
-  commentId: Overload:MacacaGames.DocGenerator.Overwrite.exclude
-  name: exclude
-  nameWithType: Overwrite.exclude
-  fullName: MacacaGames.DocGenerator.Overwrite.exclude

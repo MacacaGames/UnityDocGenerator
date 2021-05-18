@@ -1,13 +1,15 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace MacacaGames.DocGenerator
 {
     [System.Serializable]
     public class VersionDefine
     {
-        public string name { get; set; }
-        public string expression { get; set; }
-        public string define { get; set; }
+        [SerializeField]
+        public string name;
+        public string expression;
+        public string define;
     }
 
     /// <summary>
@@ -16,17 +18,17 @@ namespace MacacaGames.DocGenerator
     [System.Serializable]
     public class AsmdefFile
     {
-        public string name { get; set; }
-        public List<string> references { get; set; }
-        public List<string> includePlatforms { get; set; }
-        public List<string> excludePlatforms { get; set; }
-        public bool allowUnsafeCode { get; set; }
-        public bool overrideReferences { get; set; }
-        public List<string> precompiledReferences { get; set; }
-        public bool autoReferenced { get; set; }
-        public List<string> defineConstraints { get; set; }
-        public List<VersionDefine> versionDefines { get; set; }
-        public bool noEngineReferences { get; set; }
+        public string name;
+        public List<string> references;
+        public List<string> includePlatforms;
+        public List<string> excludePlatforms;
+        public bool allowUnsafeCode;
+        public bool overrideReferences;
+        public List<string> precompiledReferences;
+        public bool autoReferenced;
+        public List<string> defineConstraints;
+        public List<VersionDefine> versionDefines;
+        public bool noEngineReferences;
     }
 
     /// <summary>
@@ -35,62 +37,62 @@ namespace MacacaGames.DocGenerator
     [System.Serializable]
     public class DocFxSetting
     {
-        public List<Metadata> metadata { get; set; }
-        public Build build { get; set; }
+        public List<Metadata> metadata;
+        public Build build;
     }
     [System.Serializable]
     public class Src
     {
-        public List<string> files { get; set; }
-        public string src { get; set; }
+        public List<string> files;
+        public string src;
     }
 
     [System.Serializable]
     public class Metadata
     {
-        public List<Src> src { get; set; }
-        public string dest { get; set; }
-        public bool disableGitFeatures { get; set; }
-        public bool disableDefaultFilter { get; set; }
-        public string filter { get; set; } = "";
+        public List<Src> src;
+        public string dest;
+        public bool disableGitFeatures;
+        public bool disableDefaultFilter;
+        public string filter= "";
     }
 
     [System.Serializable]
     public class Content
     {
-        public string src { get; set; } = "";
-        public List<string> files { get; set; }
+        public string src ="";
+        public List<string> files;
     }
 
     [System.Serializable]
     public class Resource
     {
-        public string src { get; set; } = "";
-        public List<string> files { get; set; }
+        public string src = "";
+        public List<string> files;
     }
 
     [System.Serializable]
     public class Overwrite
     {
-        public List<string> files { get; set; }
-        public List<string> exclude { get; set; }
+        public List<string> files;
+        public List<string> exclude;
     }
 
     [System.Serializable]
     public class Build
     {
-        public List<Content> content { get; set; }
-        public List<Resource> resource { get; set; }
-        public List<Overwrite> overwrite { get; set; }
-        public string dest { get; set; }
-        public List<object> globalMetadataFiles { get; set; }
-        public List<object> fileMetadataFiles { get; set; }
-        public List<string> template { get; set; }
-        public List<object> postProcessors { get; set; }
-        public string markdownEngineName { get; set; }
-        public bool noLangKeyword { get; set; }
-        public bool keepFileLink { get; set; }
-        public bool cleanupCacheHistory { get; set; }
-        public bool disableGitFeatures { get; set; }
+        public List<Content> content;
+        public List<Resource> resource;
+        public List<Overwrite> overwrite;
+        public string dest;
+        public List<object> globalMetadataFiles;
+        public List<object> fileMetadataFiles;
+        public List<string> template;
+        public List<object> postProcessors;
+        public string markdownEngineName;
+        public bool noLangKeyword;
+        public bool keepFileLink;
+        public bool cleanupCacheHistory;
+        public bool disableGitFeatures;
     }
 }

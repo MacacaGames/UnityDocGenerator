@@ -22,7 +22,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: VersionDefine
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -56,7 +56,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.VersionDefine.name
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.name
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.name
   id: name
   parent: MacacaGames.DocGenerator.VersionDefine
   langs:
@@ -65,7 +65,7 @@ items:
   name: name
   nameWithType: VersionDefine.name
   fullName: MacacaGames.DocGenerator.VersionDefine.name
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -73,25 +73,31 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: name
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string name { get; set; }
-    parameters: []
+    content: >-
+      [SerializeField]
+
+      public string name
     return:
       type: System.String
-    content.vb: Public Property name As String
-  overload: MacacaGames.DocGenerator.VersionDefine.name*
+    content.vb: >-
+      <SerializeField>
+
+      Public name As String
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.VersionDefine.expression
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.expression
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.expression
   id: expression
   parent: MacacaGames.DocGenerator.VersionDefine
   langs:
@@ -100,7 +106,7 @@ items:
   name: expression
   nameWithType: VersionDefine.expression
   fullName: MacacaGames.DocGenerator.VersionDefine.expression
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -108,25 +114,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: expression
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string expression { get; set; }
-    parameters: []
+    content: public string expression
     return:
       type: System.String
-    content.vb: Public Property expression As String
-  overload: MacacaGames.DocGenerator.VersionDefine.expression*
+    content.vb: Public expression As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.VersionDefine.define
-  commentId: P:MacacaGames.DocGenerator.VersionDefine.define
+  commentId: F:MacacaGames.DocGenerator.VersionDefine.define
   id: define
   parent: MacacaGames.DocGenerator.VersionDefine
   langs:
@@ -135,7 +137,7 @@ items:
   name: define
   nameWithType: VersionDefine.define
   fullName: MacacaGames.DocGenerator.VersionDefine.define
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -143,21 +145,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: define
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string define { get; set; }
-    parameters: []
+    content: public string define
     return:
       type: System.String
-    content.vb: Public Property define As String
-  overload: MacacaGames.DocGenerator.VersionDefine.define*
+    content.vb: Public define As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -458,11 +456,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.VersionDefine.name*
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.name
-  name: name
-  nameWithType: VersionDefine.name
-  fullName: MacacaGames.DocGenerator.VersionDefine.name
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -470,13 +463,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: MacacaGames.DocGenerator.VersionDefine.expression*
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.expression
-  name: expression
-  nameWithType: VersionDefine.expression
-  fullName: MacacaGames.DocGenerator.VersionDefine.expression
-- uid: MacacaGames.DocGenerator.VersionDefine.define*
-  commentId: Overload:MacacaGames.DocGenerator.VersionDefine.define
-  name: define
-  nameWithType: VersionDefine.define
-  fullName: MacacaGames.DocGenerator.VersionDefine.define

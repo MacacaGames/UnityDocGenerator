@@ -21,7 +21,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Content
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 57
+    startLine: 59
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -55,7 +55,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.Content.src
-  commentId: P:MacacaGames.DocGenerator.Content.src
+  commentId: F:MacacaGames.DocGenerator.Content.src
   id: src
   parent: MacacaGames.DocGenerator.Content
   langs:
@@ -64,7 +64,7 @@ items:
   name: src
   nameWithType: Content.src
   fullName: MacacaGames.DocGenerator.Content.src
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -72,25 +72,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: src
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public string src { get; set; }
-    parameters: []
+    content: public string src
     return:
       type: System.String
-    content.vb: Public Property src As String
-  overload: MacacaGames.DocGenerator.Content.src*
+    content.vb: Public src As String
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.Content.files
-  commentId: P:MacacaGames.DocGenerator.Content.files
+  commentId: F:MacacaGames.DocGenerator.Content.files
   id: files
   parent: MacacaGames.DocGenerator.Content
   langs:
@@ -99,7 +95,7 @@ items:
   name: files
   nameWithType: Content.files
   fullName: MacacaGames.DocGenerator.Content.files
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -107,21 +103,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: files
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<string> files { get; set; }
-    parameters: []
+    content: public List<string> files
     return:
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Property files As List(Of String)
-  overload: MacacaGames.DocGenerator.Content.files*
+    content.vb: Public files As List(Of String)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -422,11 +414,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.Content.src*
-  commentId: Overload:MacacaGames.DocGenerator.Content.src
-  name: src
-  nameWithType: Content.src
-  fullName: MacacaGames.DocGenerator.Content.src
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -434,11 +421,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: MacacaGames.DocGenerator.Content.files*
-  commentId: Overload:MacacaGames.DocGenerator.Content.files
-  name: files
-  nameWithType: Content.files
-  fullName: MacacaGames.DocGenerator.Content.files
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic

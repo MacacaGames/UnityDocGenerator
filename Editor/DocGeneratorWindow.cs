@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace MacacaGames.DocGenerator
 {
-  
+
     public class DocGeneratorWindow : EditorWindow
     {
         private static string _persistentDataPath;
@@ -99,7 +99,7 @@ namespace MacacaGames.DocGenerator
                 var json = File.ReadAllText(SettingFilePath);
                 try
                 {
-                    settings = LitJson.JsonMapper.ToObject<UnityDocGeneratorSetting>(json);
+                    settings = JsonUtility.FromJson<UnityDocGeneratorSetting>(json);
                 }
                 catch
                 {
@@ -122,7 +122,7 @@ namespace MacacaGames.DocGenerator
         }
         static void SaveSetting()
         {
-            var json = LitJson.JsonMapper.ToJson(settings);
+            var json = JsonUtility.ToJson(settings);
             File.WriteAllText(SettingFilePath, json);
         }
 
@@ -259,7 +259,7 @@ namespace MacacaGames.DocGenerator
 
             // modify docfx.json
             var settingFileContent = File.ReadAllText(DocFxSettingFilePath);
-            DocFxSetting setting = LitJson.JsonMapper.ToObject<DocFxSetting>(settingFileContent);
+            DocFxSetting setting = JsonUtility.FromJson<DocFxSetting>(settingFileContent);
 
             setting.build.dest = BuildDest;
             Metadata metadata;
@@ -286,11 +286,7 @@ namespace MacacaGames.DocGenerator
             src.src = Utils.GetRelativePath(currentSelectPath, UnityProjectPath);
             metadata.src.Add(src);
             setting.metadata.Add(metadata);
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            LitJson.JsonWriter writer = new LitJson.JsonWriter(stringBuilder);
-            writer.PrettyPrint = true;
-            LitJson.JsonMapper.ToJson(setting, writer);
-            var modifiedJson = stringBuilder.ToString();
+            var modifiedJson =  JsonUtility.ToJson(setting, true);
             File.WriteAllText(DocFxSettingFilePath, modifiedJson);
 
             // modify index.md
@@ -361,7 +357,7 @@ namespace MacacaGames.DocGenerator
             foreach (var item in path)
             {
                 var json = File.ReadAllText(item);
-                AsmdefFile setting = LitJson.JsonMapper.ToObject<AsmdefFile>(json);
+                AsmdefFile setting = JsonUtility.FromJson<AsmdefFile>(json);
                 result.Add(setting.name + ".csproj");
             }
             return result;

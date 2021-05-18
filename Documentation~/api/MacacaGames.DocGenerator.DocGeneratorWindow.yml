@@ -27,12 +27,10 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: DocGeneratorWindow
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 12
+    startLine: 10
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
-  summary: "\nThe main code\n"
-  example: []
   syntax:
     content: 'public class DocGeneratorWindow : EditorWindow'
     content.vb: >-
@@ -84,6 +82,7 @@ items:
   - UnityEditor.EditorWindow.GetWindowWithRect``1(UnityEngine.Rect,System.Boolean)
   - UnityEditor.EditorWindow.GetWindowWithRect``1(UnityEngine.Rect,System.Boolean,System.String)
   - UnityEditor.EditorWindow.GetWindowWithRect``1(UnityEngine.Rect,System.Boolean,System.String,System.Boolean)
+  - UnityEditor.EditorWindow.SaveChanges
   - UnityEditor.EditorWindow.Close
   - UnityEditor.EditorWindow.Repaint
   - UnityEditor.EditorWindow.SendEvent(UnityEngine.Event)
@@ -91,10 +90,15 @@ items:
   - UnityEditor.EditorWindow.rootVisualElement
   - UnityEditor.EditorWindow.wantsMouseMove
   - UnityEditor.EditorWindow.wantsMouseEnterLeaveWindow
+  - UnityEditor.EditorWindow.wantsLessLayoutEvents
   - UnityEditor.EditorWindow.autoRepaintOnSceneChange
   - UnityEditor.EditorWindow.maximized
+  - UnityEditor.EditorWindow.hasFocus
+  - UnityEditor.EditorWindow.docked
   - UnityEditor.EditorWindow.focusedWindow
   - UnityEditor.EditorWindow.mouseOverWindow
+  - UnityEditor.EditorWindow.hasUnsavedChanges
+  - UnityEditor.EditorWindow.saveChangesMessage
   - UnityEditor.EditorWindow.minSize
   - UnityEditor.EditorWindow.maxSize
   - UnityEditor.EditorWindow.title
@@ -124,15 +128,19 @@ items:
   - UnityEngine.Object.DestroyImmediate(UnityEngine.Object,System.Boolean)
   - UnityEngine.Object.DestroyImmediate(UnityEngine.Object)
   - UnityEngine.Object.FindObjectsOfType(System.Type)
+  - UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)
   - UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)
   - UnityEngine.Object.DestroyObject(UnityEngine.Object,System.Single)
   - UnityEngine.Object.DestroyObject(UnityEngine.Object)
   - UnityEngine.Object.FindSceneObjectsOfType(System.Type)
   - UnityEngine.Object.FindObjectsOfTypeIncludingAssets(System.Type)
   - UnityEngine.Object.FindObjectsOfType``1
+  - UnityEngine.Object.FindObjectsOfType``1(System.Boolean)
   - UnityEngine.Object.FindObjectOfType``1
+  - UnityEngine.Object.FindObjectOfType``1(System.Boolean)
   - UnityEngine.Object.FindObjectsOfTypeAll(System.Type)
   - UnityEngine.Object.FindObjectOfType(System.Type)
+  - UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)
   - UnityEngine.Object.ToString
   - UnityEngine.Object.name
   - UnityEngine.Object.hideFlags
@@ -164,7 +172,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: DocFxProject
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 38
+    startLine: 36
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -197,7 +205,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: settingFile
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 39
+    startLine: 37
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -230,7 +238,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Instance
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 60
+    startLine: 58
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -263,7 +271,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: currentSelectPath
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 64
+    startLine: 62
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -300,7 +308,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: OpenWindow
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 78
+    startLine: 76
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -344,7 +352,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: isGenerateAvailable
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 133
+    startLine: 131
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -381,7 +389,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: Docfx
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 256
+    startLine: 254
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -411,7 +419,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: OpenByDocGenerator
     path: ../Editor/DocGeneratorWindow.cs
-    startLine: 466
+    startLine: 460
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -2500,6 +2508,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEditor.EditorWindow.SaveChanges
+  commentId: M:UnityEditor.EditorWindow.SaveChanges
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: SaveChanges()
+  nameWithType: EditorWindow.SaveChanges()
+  fullName: UnityEditor.EditorWindow.SaveChanges()
+  spec.csharp:
+  - uid: UnityEditor.EditorWindow.SaveChanges
+    name: SaveChanges
+    nameWithType: EditorWindow.SaveChanges
+    fullName: UnityEditor.EditorWindow.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEditor.EditorWindow.SaveChanges
+    name: SaveChanges
+    nameWithType: EditorWindow.SaveChanges
+    fullName: UnityEditor.EditorWindow.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: UnityEditor.EditorWindow.Close
   commentId: M:UnityEditor.EditorWindow.Close
   parent: UnityEditor.EditorWindow
@@ -2655,6 +2694,13 @@ references:
   name: wantsMouseEnterLeaveWindow
   nameWithType: EditorWindow.wantsMouseEnterLeaveWindow
   fullName: UnityEditor.EditorWindow.wantsMouseEnterLeaveWindow
+- uid: UnityEditor.EditorWindow.wantsLessLayoutEvents
+  commentId: P:UnityEditor.EditorWindow.wantsLessLayoutEvents
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: wantsLessLayoutEvents
+  nameWithType: EditorWindow.wantsLessLayoutEvents
+  fullName: UnityEditor.EditorWindow.wantsLessLayoutEvents
 - uid: UnityEditor.EditorWindow.autoRepaintOnSceneChange
   commentId: P:UnityEditor.EditorWindow.autoRepaintOnSceneChange
   parent: UnityEditor.EditorWindow
@@ -2669,6 +2715,20 @@ references:
   name: maximized
   nameWithType: EditorWindow.maximized
   fullName: UnityEditor.EditorWindow.maximized
+- uid: UnityEditor.EditorWindow.hasFocus
+  commentId: P:UnityEditor.EditorWindow.hasFocus
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: hasFocus
+  nameWithType: EditorWindow.hasFocus
+  fullName: UnityEditor.EditorWindow.hasFocus
+- uid: UnityEditor.EditorWindow.docked
+  commentId: P:UnityEditor.EditorWindow.docked
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: docked
+  nameWithType: EditorWindow.docked
+  fullName: UnityEditor.EditorWindow.docked
 - uid: UnityEditor.EditorWindow.focusedWindow
   commentId: P:UnityEditor.EditorWindow.focusedWindow
   parent: UnityEditor.EditorWindow
@@ -2683,6 +2743,20 @@ references:
   name: mouseOverWindow
   nameWithType: EditorWindow.mouseOverWindow
   fullName: UnityEditor.EditorWindow.mouseOverWindow
+- uid: UnityEditor.EditorWindow.hasUnsavedChanges
+  commentId: P:UnityEditor.EditorWindow.hasUnsavedChanges
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: hasUnsavedChanges
+  nameWithType: EditorWindow.hasUnsavedChanges
+  fullName: UnityEditor.EditorWindow.hasUnsavedChanges
+- uid: UnityEditor.EditorWindow.saveChangesMessage
+  commentId: P:UnityEditor.EditorWindow.saveChangesMessage
+  parent: UnityEditor.EditorWindow
+  isExternal: true
+  name: saveChangesMessage
+  nameWithType: EditorWindow.saveChangesMessage
+  fullName: UnityEditor.EditorWindow.saveChangesMessage
 - uid: UnityEditor.EditorWindow.minSize
   commentId: P:UnityEditor.EditorWindow.minSize
   parent: UnityEditor.EditorWindow
@@ -3880,6 +3954,63 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)
+  commentId: M:UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)
+  parent: UnityEngine.Object
+  isExternal: true
+  name: FindObjectsOfType(Type, Boolean)
+  nameWithType: Object.FindObjectsOfType(Type, Boolean)
+  fullName: UnityEngine.Object.FindObjectsOfType(System.Type, System.Boolean)
+  spec.csharp:
+  - uid: UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)
+    name: FindObjectsOfType
+    nameWithType: Object.FindObjectsOfType
+    fullName: UnityEngine.Object.FindObjectsOfType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)
+    name: FindObjectsOfType
+    nameWithType: Object.FindObjectsOfType
+    fullName: UnityEngine.Object.FindObjectsOfType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)
   commentId: M:UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)
   parent: UnityEngine.Object
@@ -4135,6 +4266,50 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Object.FindObjectsOfType``1(System.Boolean)
+  commentId: M:UnityEngine.Object.FindObjectsOfType``1(System.Boolean)
+  parent: UnityEngine.Object
+  isExternal: true
+  name: FindObjectsOfType<T>(Boolean)
+  nameWithType: Object.FindObjectsOfType<T>(Boolean)
+  fullName: UnityEngine.Object.FindObjectsOfType<T>(System.Boolean)
+  nameWithType.vb: Object.FindObjectsOfType(Of T)(Boolean)
+  fullName.vb: UnityEngine.Object.FindObjectsOfType(Of T)(System.Boolean)
+  name.vb: FindObjectsOfType(Of T)(Boolean)
+  spec.csharp:
+  - uid: UnityEngine.Object.FindObjectsOfType``1(System.Boolean)
+    name: FindObjectsOfType<T>
+    nameWithType: Object.FindObjectsOfType<T>
+    fullName: UnityEngine.Object.FindObjectsOfType<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEngine.Object.FindObjectsOfType``1(System.Boolean)
+    name: FindObjectsOfType(Of T)
+    nameWithType: Object.FindObjectsOfType(Of T)
+    fullName: UnityEngine.Object.FindObjectsOfType(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: UnityEngine.Object.FindObjectOfType``1
   commentId: M:UnityEngine.Object.FindObjectOfType``1
   parent: UnityEngine.Object
@@ -4166,6 +4341,50 @@ references:
   - name: (
     nameWithType: (
     fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.Object.FindObjectOfType``1(System.Boolean)
+  commentId: M:UnityEngine.Object.FindObjectOfType``1(System.Boolean)
+  parent: UnityEngine.Object
+  isExternal: true
+  name: FindObjectOfType<T>(Boolean)
+  nameWithType: Object.FindObjectOfType<T>(Boolean)
+  fullName: UnityEngine.Object.FindObjectOfType<T>(System.Boolean)
+  nameWithType.vb: Object.FindObjectOfType(Of T)(Boolean)
+  fullName.vb: UnityEngine.Object.FindObjectOfType(Of T)(System.Boolean)
+  name.vb: FindObjectOfType(Of T)(Boolean)
+  spec.csharp:
+  - uid: UnityEngine.Object.FindObjectOfType``1(System.Boolean)
+    name: FindObjectOfType<T>
+    nameWithType: Object.FindObjectOfType<T>
+    fullName: UnityEngine.Object.FindObjectOfType<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEngine.Object.FindObjectOfType``1(System.Boolean)
+    name: FindObjectOfType(Of T)
+    nameWithType: Object.FindObjectOfType(Of T)
+    fullName: UnityEngine.Object.FindObjectOfType(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -4247,6 +4466,63 @@ references:
     name: Type
     nameWithType: Type
     fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)
+  commentId: M:UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)
+  parent: UnityEngine.Object
+  isExternal: true
+  name: FindObjectOfType(Type, Boolean)
+  nameWithType: Object.FindObjectOfType(Type, Boolean)
+  fullName: UnityEngine.Object.FindObjectOfType(System.Type, System.Boolean)
+  spec.csharp:
+  - uid: UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)
+    name: FindObjectOfType
+    nameWithType: Object.FindObjectOfType
+    fullName: UnityEngine.Object.FindObjectOfType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)
+    name: FindObjectOfType
+    nameWithType: Object.FindObjectOfType
+    fullName: UnityEngine.Object.FindObjectOfType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
   - name: )
     nameWithType: )

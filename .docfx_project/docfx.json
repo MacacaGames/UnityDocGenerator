@@ -1,26 +1,25 @@
-
 {
-    "metadata" : [
+    "metadata": [
         {
-            "src" : [
+            "src": [
                 {
-                    "files" : [
+                    "files": [
                         "Macaca.DocGenerator.csproj"
                     ],
-                    "src"   : "../../../"
+                    "src": "../../../"
                 }
             ],
-            "dest" : "../Documentation~/api",
-            "disableGitFeatures" : false,
-            "disableDefaultFilter" : false,
-            "filter"               : ""
+            "dest": "../Documentation~/api",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false,
+            "filter": ""
         }
     ],
-    "build"    : {
-        "content" : [
+    "build": {
+        "content": [
             {
-                "src" : "",
-                "files" : [
+                "src": "",
+                "files": [
                     "index.md",
                     "**.yml",
                     "api/**.yml",
@@ -28,8 +27,8 @@
                 ]
             },
             {
-                "src" : "../Documentation~",
-                "files" : [
+                "src": "../Documentation~",
+                "files": [
                     "*.md",
                     "*.yml",
                     "**/*.md",
@@ -37,41 +36,35 @@
                 ]
             }
         ],
-        "resource" : [
+        "resource": [
             {
-                "src" : "",
-                "files" : [
+                "src": "",
+                "files": [
                     "images/**",
                     "favicon.ico",
                     "logo.svg"
                 ]
             }
         ],
-        "overwrite" : [
+        "overwrite": [
             {
-                "files" : [
+                "files": [
                     "apidoc/**.md"
                 ],
-                "exclude" : [
+                "exclude": [
                     "obj/**",
                     "_site/**"
                 ]
             }
         ],
-        "dest"      : "../docs~",
-        "globalMetadataFiles" : [
-        ],
-        "fileMetadataFiles"   : [
-        ],
-        "template"            : [
+        "dest": "../docs~",
+        "template": [
             "default"
         ],
-        "postProcessors"      : [
-        ],
-        "markdownEngineName"  : "markdig",
-        "noLangKeyword"       : false,
-        "keepFileLink"        : false,
-        "cleanupCacheHistory" : false,
-        "disableGitFeatures"  : false
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": false
     }
 }

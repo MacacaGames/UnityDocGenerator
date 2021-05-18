@@ -21,7 +21,7 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: DocFxSetting
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
@@ -57,7 +57,7 @@ items:
   - Public
   - Class
 - uid: MacacaGames.DocGenerator.DocFxSetting.metadata
-  commentId: P:MacacaGames.DocGenerator.DocFxSetting.metadata
+  commentId: F:MacacaGames.DocGenerator.DocFxSetting.metadata
   id: metadata
   parent: MacacaGames.DocGenerator.DocFxSetting
   langs:
@@ -66,7 +66,7 @@ items:
   name: metadata
   nameWithType: DocFxSetting.metadata
   fullName: MacacaGames.DocGenerator.DocFxSetting.metadata
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -74,25 +74,21 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: metadata
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public List<Metadata> metadata { get; set; }
-    parameters: []
+    content: public List<Metadata> metadata
     return:
       type: System.Collections.Generic.List{MacacaGames.DocGenerator.Metadata}
-    content.vb: Public Property metadata As List(Of Metadata)
-  overload: MacacaGames.DocGenerator.DocFxSetting.metadata*
+    content.vb: Public metadata As List(Of Metadata)
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: MacacaGames.DocGenerator.DocFxSetting.build
-  commentId: P:MacacaGames.DocGenerator.DocFxSetting.build
+  commentId: F:MacacaGames.DocGenerator.DocFxSetting.build
   id: build
   parent: MacacaGames.DocGenerator.DocFxSetting
   langs:
@@ -101,7 +97,7 @@ items:
   name: build
   nameWithType: DocFxSetting.build
   fullName: MacacaGames.DocGenerator.DocFxSetting.build
-  type: Property
+  type: Field
   source:
     remote:
       path: Editor/Model/DocFxSetting.cs
@@ -109,21 +105,17 @@ items:
       repo: git@github.com:MacacaGames/UnityDocGenerator.git
     id: build
     path: ../Editor/Model/DocFxSetting.cs
-    startLine: 38
+    startLine: 40
   assemblies:
   - Macaca.DocGenerator
   namespace: MacacaGames.DocGenerator
   syntax:
-    content: public Build build { get; set; }
-    parameters: []
+    content: public Build build
     return:
       type: MacacaGames.DocGenerator.Build
-    content.vb: Public Property build As Build
-  overload: MacacaGames.DocGenerator.DocFxSetting.build*
+    content.vb: Public build As Build
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
@@ -424,11 +416,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MacacaGames.DocGenerator.DocFxSetting.metadata*
-  commentId: Overload:MacacaGames.DocGenerator.DocFxSetting.metadata
-  name: metadata
-  nameWithType: DocFxSetting.metadata
-  fullName: MacacaGames.DocGenerator.DocFxSetting.metadata
 - uid: System.Collections.Generic.List{MacacaGames.DocGenerator.Metadata}
   commentId: T:System.Collections.Generic.List{MacacaGames.DocGenerator.Metadata}
   parent: System.Collections.Generic
@@ -516,11 +503,6 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: MacacaGames.DocGenerator.DocFxSetting.build*
-  commentId: Overload:MacacaGames.DocGenerator.DocFxSetting.build
-  name: build
-  nameWithType: DocFxSetting.build
-  fullName: MacacaGames.DocGenerator.DocFxSetting.build
 - uid: MacacaGames.DocGenerator.Build
   commentId: T:MacacaGames.DocGenerator.Build
   parent: MacacaGames.DocGenerator
