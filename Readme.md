@@ -15,13 +15,6 @@ Add the following line to Packages/manifest.json:
 "com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.0",
 ```
 
-UnityDocGenerator use LitJson, so make sure [LitJson](https://litjson.net/) in your project.
-
-Or using UPM package to install LitJson. (This is a third party package)
-```json
-"com.ms.litjson":"https://github.com/wlgys8/LitJsonUPM.git",
-```
-
 ### Environment Setup
 #### macOS, Linux
 Make sure Mono Framework runtime is installed in your computer.
