@@ -10,9 +10,9 @@ A helper to make docfx based document in Unity3D
 ## Pre-requisites
 UnityDocGenerator require the package manager ui extension mechanism, which is available from version 1.9.3 or later, or remove PackageManager/DocGeneratorPackageManagerExtension.cs to break the Package Manger UI supportion.
 ## Installtion
-Add the following line to Packages/manifest.json:
+Add the following line to Packages/manifest.json: (or add #{versionCode} in the end of string to use specified version)
 ```json
-"com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.0",
+"com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git",
 ```
 
 ### Environment Setup
