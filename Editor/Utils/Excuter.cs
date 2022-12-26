@@ -13,7 +13,7 @@ public static class Excuter
     {
 
         ProcessStartInfo startInfo;
-#if UNITY_EDITOR_OSX
+#if UNITY_EDITOR_OSX || UNITY_EDITOR_LINUX
         var escapedArgs = cmd.Replace("\"", "\\\"");
 
         startInfo = new ProcessStartInfo
